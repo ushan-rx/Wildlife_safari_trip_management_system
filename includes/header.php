@@ -1,6 +1,6 @@
 <header>
     <div class="navbar">
-        <a href="#" class="site-icon">
+        <a href="index.php" class="site-icon">
             <img src="images/deerlogo.png" alt="website logo">
             <img src="images/sitename.png" alt="website name">
         </a>
@@ -21,7 +21,7 @@
                 <?php
             }else{
                 ?>
-                <img src="images/user-icon.png" alt="menu icon" class="user-icon"  id="nav_user_icon">
+                <img src="images/user-icon.png" alt="user icon" class="user-icon"  id="nav_user_icon">
                 <span class="user-list hidden" id="nav_user_list">
                     <ul>
                         <li><a href="#">Account</a></li>
@@ -31,7 +31,6 @@
             <?php
             }
             ?>
-
         </div>
         <img src="images/menu_black.png" alt="menu icon" class="menu-icon">
     </div>
