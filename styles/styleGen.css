@@ -81,25 +81,24 @@ body {
   font-size: var(--fs-body);
 }
 
+/* set default attributes */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  color: var(--clr-default-txt);
   font-family: var(--ff-primary);
 }
 
-/* Set core root defaults */
-html:focus-within {
+
+/* html:focus-within {
   scroll-behavior: smooth;
-}
+} */
 
 html,
 body {
@@ -107,19 +106,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Set core body defaults */
+
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-/* Make images easier to work with */
 img,
-picture,
 svg {
   max-width: 100%;
   display: block;
 }
+
+/* utlity classes and general styles */
 
 .visually-hidden {
   position: absolute !important;
@@ -138,7 +137,6 @@ svg {
   display: none;
 }
 
-
 .primary-header{
   font-size:  var(--fs-h1);
   font-weight: var(--fw-extbold);
@@ -156,6 +154,11 @@ svg {
 
 h4 {
   font-size: var(--fs-h4);
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-default-txt);
 }
 
 /* buttons default */
@@ -188,7 +191,6 @@ header{
   top: 0;
   width: 100%;
   z-index: 100;
-
 }
 
 .navbar {
@@ -246,7 +248,7 @@ header{
 .button-nav {
   font-size: var(--fs-16);
   font-weight: var(--fw-semibold);
-  outline: 0.1em solid #666d6d1f;
+  outline: 0.1em solid rgba(102, 109, 109, 0.122);
 }
 
 .user-icon{
@@ -274,8 +276,16 @@ header{
   list-style-type: none;
 }
 
+.user-list a:hover{
+  color: var(--clr-green-700);
+
+}
+
 .sign-in {
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
+}
+
+.sign-in a, .user-list a{
   color: var(--clr-black-400);
 }
 

@@ -97,12 +97,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: signInUp.php?type=reg&error=$msg");
                 exit();
             }else{
-                $msg = "Registration feailed. Connection error";
+                $msg = "Registration failed. Connection error";
                 header("Location: signInUp.php?type=reg&error=$msg&$gotData");
                 exit();
             }
         }
-
+        
     }
 } else {
     header("Location: signInUp.php");
