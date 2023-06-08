@@ -45,7 +45,7 @@
 /* dark mode light mode color schemes */
 @media (prefers-color-scheme: dark) {
   :root {
-    --clr-default-txt: rgb(255, 255, 255);
+    --clr-default-txt: rgb(239, 239, 239);
     --clr-default-back: var(--clr-black-500);
 
     --clr-green-300: rgb(55, 89, 58);
@@ -55,6 +55,7 @@
     --clr-aqua-600: rgb(0, 37, 54);
 
     --clr-black-shadow: rgba(143, 235, 109, 0.46);
+    --clr-txt-shade1: rgb(240, 227, 211);
   }
 }
 
@@ -70,7 +71,7 @@
     --clr-aqua-600: rgb(22, 176, 147);
 
     --clr-black-shadow: rgba(41, 47, 39, 0.273);
-    
+    --clr-txt-shade1: rgba(13, 12, 51, 0.78);
   }
 }
 

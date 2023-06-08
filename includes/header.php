@@ -7,7 +7,7 @@
         <ul id="nav-links">
             <li><a href="index.php" class="links">Home</a></li>
             <li><a href="" class="links">Packages</a></li>
-            <li><a href="" class="links">Destinations</a></li>
+            <li><a href="safari.php" class="links">Destinations</a></li>
             <li><a href="" class="links">Testimonials</a></li>
             <li><a href="" class="links">Contact Us</a></li>
         </ul>

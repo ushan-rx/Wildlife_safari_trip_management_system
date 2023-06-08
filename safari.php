@@ -145,10 +145,10 @@
        <input type="radio" name="radio-btn" value="8" id="radio8">
  
        
-       <img src="images/j2.jpg"  class="slide two"  alt="img1">
+       <img src="images/ch1.jpg"  class="slide two"  alt="img1">
        <img src="images/e2.jpg"  class="slide"      alt="img2">
        <img src="images/sn1.jpg" class="slide"      alt="img3">
-       <img src="images/t2.jpg"  class="slide"      alt="img4">
+       <img src="images/j2.jpg"  class="slide"      alt="img4">
      
      
      </div>
@@ -203,10 +203,10 @@
    
  
        
-       <img src="images/e3.jpg"  class="slide three"    alt="img1">
+       <img src="images/p1.jpg"  class="slide three"    alt="img1">
        <img src="images/b2.jpg"  class="slide"          alt="img2">
        <img src="images/m1.jpg"  class="slide"          alt="img3">
-       <img src="images/p1.jpg"  class="slide"          alt="img4">
+       <img src="images/e3.jpg"  class="slide"          alt="img4">
        
      
      </div>
@@ -263,7 +263,7 @@
  
        
        <img src="images/e1.jpg"  class="slide four"  alt="img1">
-       <img src="images/j1.jpg"  class="slide"       alt="img2">
+       <img src="images/t2.jpg"  class="slide"       alt="img2">
        <img src="images/m2.jpg"  class="slide"       alt="img3">
        <img src="images/b4.jpg"  class="slide"       alt="img4">
        
@@ -322,7 +322,7 @@
      
  
        
-       <img src="images/ch1.jpg"  class="slide five"    alt="img1">
+       <img src="images/t5.jpg"  class="slide five"    alt="img1">
        <img src="images/b3.jpg"   class="slide"         alt="img2">
        <img src="images/e3.jpg"   class="slide"         alt="img3">
        <img src="images/t2.jpeg"  class="slide"         alt="img4">
