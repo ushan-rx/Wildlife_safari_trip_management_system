@@ -17,4 +17,4 @@
 
     <h6>Copyrights 2023-Present. All Rights Reserved.</h6>
 
-  </footer>
+</footer>
