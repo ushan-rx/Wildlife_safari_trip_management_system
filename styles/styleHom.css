@@ -1,4 +1,3 @@
-/* utility classes */
 
 .box-wrapper{
   width: 100%;
@@ -69,10 +68,11 @@
   }
 
   .section-end{
-    border: 1px solid var(--clr-default-txt);
+    border: 3px solid rgba(220, 249, 158, 0.938);
+    border-radius: 5px;
     margin: 0 1vw;
   }
-
+  
   .left-col{
     width: 40vw;
   }

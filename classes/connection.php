@@ -18,7 +18,10 @@ class Database{
 
     public static function iud($q){
         Database::setUpConnection();
-        Database::$connection->query($q);
+        if(Database::$connection->query($q)){
+            return true;
+        }
+        return false;
     }
 
     public static function search($q){
