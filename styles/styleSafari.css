@@ -1,0 +1,149 @@
+
+.container-1 img {
+
+    position: relative;
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .container-1 h1 {
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-extbold);
+    color: #ffffff;
+    position: absolute;
+    top: 2rem;
+    padding: 10rem;
+  
+  }
+  
+  .container-1 ul {
+    font-size: medium;
+    font-family: var(--ff-primary);
+    position: absolute;
+    top: 2%;
+    padding: 15rem;
+    line-height: 300%;
+  }
+  
+  .container-1 ul li {
+    color: #ffffff;
+  }
+  
+  .container-2 {
+  
+    padding: 3rem 5%;
+  }
+  
+  .card-flex {
+  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card {
+  
+    width: 100%;
+    height: 550px;
+    padding: 20px;
+    border-radius:20px;
+    box-shadow:0px 0px 10px 2px var(--clr-black-shadow); 
+    position: relative;
+    background-color: var(--clr-green-500);
+  }
+  
+  .sliders {
+  
+    position: absolute;
+    width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 3%;
+    margin-top: 3%;
+     
+  }
+  
+  .slide {
+  
+    
+    height: 350px;
+    display: flex;
+  
+  }
+  
+  .slide input {
+  
+    display: none;
+  
+  }
+  
+  .slide {
+    transition: 1s;
+  }
+  
+  img.slide{
+  
+    max-width: fit-content;
+  }
+  
+  .navigation {
+  
+    position: absolute;
+    width: 460px;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .manual-btn {
+  
+    border-radius: 50%;
+    border: solid #ffffff 3px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 1s;
+  }
+  
+  .manual-btn:not(:last-child) {
+  
+    margin-right: 10px;
+  }
+  
+  .manual-btn:hover {
+  
+    background: #318979;
+  
+  }
+  
+  .content {
+  
+    position: absolute;
+    padding-left: 550px;
+    padding-right: 50px;
+    padding-top: 10px;
+    font-size: medium;
+    justify-content: center;
+  
+  }
+  
+  .button-book {
+  
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    border-radius: 0.5em;
+    border: 0;
+    background-color: var(--clr-aqua-600);
+    color: var(--clr-white-600);
+    font-size: var(--fs-button);
+    font-weight: var(--fw-semibold);
+     margin-left: 12rem;
+    margin-top: 28rem;
+    position: absolute;
+  
+  }
+  
+  .button-book:hover {
+  
+      box-shadow: 0 0 0 2px var(--clr-aqua-600),
+      inset 0 0 0 1px #ffffff;
+  }
