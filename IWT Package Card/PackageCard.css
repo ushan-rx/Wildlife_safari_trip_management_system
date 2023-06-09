@@ -9,10 +9,8 @@ html{
     font-size: 15px;
 }*/
 
-
-
 body{
-    background: var(--clr-aqua-600);
+    background: rgb(13, 13, 13);
     /*font-family: 'Nunito', sans-serif;
     width: 80%;
     margin: 0 auto;
@@ -24,21 +22,22 @@ body{
 
 /*All best deals card */
 .cards{
-    /* margin-top: 100px;
+    margin-top: 100px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;  
 
     
 }
 
 /*side best deals card styles*/
 .side-card{
-    background-color: rgb(126, 124, 121);
+    background-color: rgb(109, 153, 29);
     border-radius: 30px;
-    border-style:   solid;
+    border-style: solid;
+    border-color: black;
     border-width: 1px;
     width: 280px;
     height: 550px;
@@ -48,7 +47,7 @@ body{
 /*middle best deal card styles*/
 .middle-card{
     
-    background: var(--clr-green-700);
+    background: rgb(50, 82, 25);
     display: flex;
     align-items: center;
     transform: scale(1.1);
@@ -56,6 +55,7 @@ body{
     border-radius: 30px;
     border-width: 1px;
     border-style: solid;
+    border-color: black;
 
     
 }
@@ -71,14 +71,14 @@ body{
 .middle-pack{
     font-size: 40px;
     font-weight: 900;
-    color: brown;
+    color: chartreuse;
 }
 
 
 /*middle card price styles $*/
 .middle-card-price{
     font-size: 3rem;
-    color:white;
+    color: white;
     font-weight:600; /*semi bold*/
     padding-bottom: 2rem;
 }
@@ -109,7 +109,6 @@ body{
     width: 100%;
     padding: 0.6rem 0;    /*best deal package middle card size*/
 
-    /*margin:2.8rem;*/
 }
 
 /*side cards purchase button (book now)*/
@@ -121,10 +120,11 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    background-color: rgb(59, 228, 101);
+    background-color: rgb(37, 75, 2);
     border: 1px solid;
     font-weight: bold;
     font-size: 20px;
+    border-color: rgb(3, 61, 1);
     
 }
 
@@ -137,23 +137,24 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    background-color: rgb(232, 241, 234);
+    background-color: rgb(109, 153, 29);
     border: 1px solid;
+    border-color: rgb(21, 95, 6);
     font-weight: bold;
     font-size: 20px;
 }
 
-/*package detals underline styles*/
+/*side best deals package details underline styles*/
 .bottom-bar{
-    border-bottom: 2px solid rgb(163, 24, 140);
+    border-bottom: 2px solid rgb(2, 53, 17);
+}
+
+/*middle best deals package details underline styles*/
+.middle-bottom-bar{
+    border-bottom: 2px solid rgb(109, 153, 29);
 }
 
 
-
-/*
-.shadow{
-    box-shadow:-5px 5px 15px 1px rgb(119, 201, 51) ; } /*additional work except this*/
-   
 
 
 /*end of the best deal packages style sheet*/
@@ -163,16 +164,14 @@ body{
 
 .pricing-table{
     display: flex;
-   /* flex-wrap: wrap;*/
-    /*justify-content: space-around;
-    /* width: min(1600px,100%); */
+
 }
 
 /*pricing card (normal) styles */
 .pricing-card{
     flex:1;
     max-width: 360px;
-    background-color: forestgreen;
+    background-color:rgb(11, 54, 51);
     margin:20px 3px;
     text-align: center;
     cursor: pointer;
@@ -200,7 +199,7 @@ body{
 /*pricing card hover color*/
 .pricing-card:hover .pricing-card-header{
 
-    box-shadow: 0 0 0 20em rgb(136, 240, 136);
+    box-shadow: 0 0 0 20em rgba(164, 221, 143, 0.414);
     border-radius: 50px;
 }
 
@@ -220,12 +219,10 @@ body{
     
 }
 
-/*
-.pricing-card :hover .price{
-
-    color: rgb(38, 13, 182);
-
-}*/
+/*per person styles*/
+.price sub{
+    font-size: 18px;
+}
 
 
 /*safari Details*/
@@ -235,6 +232,7 @@ body{
     /*text-transform: uppercase;*/
 }
 
+/*Order button styles*/
 .order-btn{
     display: inline-block;
     margin-bottom: 40px;
@@ -243,26 +241,15 @@ body{
     color: rgb(6, 12, 0);
     padding: 18px 40px;
     border-radius: 30px;
-    text-transform: uppercase;
     font-weight: 800;
     transition: .3s linear;
 }
 
 /*order button */
 .order-btn:hover{
-    background-color: rgb(3, 65, 22);
+    background-color: rgb(3, 39, 14);
     color: orange;
 }
-
-/*
-@media screen and (max-width:1100px){
-    .pricing-card{
-        flex: 50%;
-    }
-
-}
-*/
-
 
 /*end of the packages style sheet*/
  
