@@ -1,0 +1,372 @@
+:root {
+
+    --clr-black-500: rgb(13, 13, 13);
+    --clr-black-400: rgb(26, 1, 1);
+    --clr-black-300: rgb(39, 46, 37);
+    --clr-white-600: rgb(255, 255, 255);
+  
+    --ff-primary: 'Roboto Serif', serif;
+    ;
+  
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --clr-default-txt: rgb(255, 255, 255);
+      --clr-default-back: var(--clr-black-500);
+  
+      --clr-green-300: rgb(55, 89, 58);
+      --clr-green-400: rgb(39, 72, 60);
+      --clr-green-500: rgb(11, 54, 51);
+      --clr-aqua-500: rgb(29, 84, 76);
+      --clr-aqua-600: rgb(0, 37, 54);
+      --clr-in-boder: rgba(249, 249, 249, 0.421);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --clr-default-txt: rgb(0, 0, 0);
+      --clr-default-back: var(--clr-white-600);
+  
+      --clr-green-300: rgb(223, 254, 194);
+      --clr-green-400: rgb(195, 255, 135);
+      --clr-green-500: rgb(151, 230, 139);
+      --clr-aqua-500: rgb(136, 235, 208);
+      --clr-aqua-600: rgb(22, 176, 147);
+      --clr-in-boder: rgba(0, 0, 0, 0.421);
+    }
+  }
+
+
+
+ /* ******************** comform bill style *********************** */
+.popup-bill{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 950px;
+} 
+
+.bill-box{
+  position: absolute;
+  top: 100px;  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;  
+
+  width: 750px;
+  
+  background-color: var(--clr-green-400);
+  border-radius: 20px;
+
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.401);
+  backdrop-filter: blur(10px);
+} 
+
+.bill-box > h2{
+  color: var(--clr-default-txt);
+  font-size: 2em;
+  top: 10px;
+  margin: 40px;
+  }
+  
+.details{
+  margin: 10px;
+  width: 600px; 
+}
+
+.bill{
+  border: 2px solid;
+  border-radius: 20px;
+  background-color:rgba(255, 255, 255, 0.282);
+  height: 560px;
+  width: 650px;
+}
+
+.details td {
+  text-align: left;
+  padding: 20px;
+  color: var(--clr-default-txt);
+  font-size: 1.4em;
+}
+
+.total-payment{
+  margin-left: 100px;
+  width: 400px;
+}
+
+.total-payment td {
+  text-align: left;
+  padding: 10px;
+  color: var(--clr-default-txt);
+  font-size: 1.5em;
+  font-weight: 600; 
+}
+
+.button{
+  display: flex;
+  flex-direction: row;
+  margin: 40px;
+}
+
+.cancle-button{
+  margin-right: 200px;
+}
+
+.comform-button{
+  margin-left: 200px;
+}
+
+.cancle-button  button{
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--clr-aqua-600);
+  color: var(--clr-default-txt);
+  font-size: 1em;
+}
+
+ .comform-button  button{
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--clr-aqua-600);
+  font-size: 1em;
+  color: var(--clr-default-txt);
+}
+
+
+.hidden{
+  display: none;    /* this is for js to hide the popup */
+}
+ 
+
+
+
+/* ******************** card details style *********************** */
+
+.card{
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  height: 650px;
+}
+
+.card-details {
+  position: absolute; 
+  top: 100px; 
+  width: 450px;
+  background-color: var(--clr-green-400);
+  padding: 20px; 
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.card-form > div{
+  margin-top: 30px;
+}
+
+.card-oneline{
+  display: flex;
+  justify-content: space-between;
+}
+
+.cvv{
+  margin-left: 30px;
+}
+
+.card-details label {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: bold; 
+  font-size: 1em;
+}
+
+.card-details input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: var(--clr-default-txt);
+}
+
+.card-form > h3{
+  text-align: center; 
+  font-size: 1.7em;
+} 
+
+.card-button > input{
+  display: block;
+  margin: 0px auto;
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: var(--clr-default-txt);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card-button > input:hover {
+  background-color: #45a049;
+} 
+
+
+
+
+/* ******************** Recipt style *********************** */
+
+.payment-receipt{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  background-color: white;
+}
+
+.receipt-box{
+  position: absolute;
+  TOP:150PX;
+  height: 550px;
+  width: 1200px;
+  border: 4px solid;
+  border-color: var(--clr-green-500);
+  background-color: white;
+} 
+
+.payment-succesfull{
+  width: 1196px;
+  height: 180px;
+  border-bottom: 2px solid;
+  box-sizing: border-box;
+  border-color: var(--clr-green-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-succesfull > .p1{
+  font-size: 2em;
+  margin: 0;
+  color: black;
+}
+.payment-succesfull> .p2{
+  font-size: 1em;
+  margin: 0;
+  color: black;
+}
+.logo-receit{
+  position: absolute;
+  top: 20px; 
+  left: 20px;
+}
+
+.receipt-details{
+  position: relative;
+  display: flex;
+  top: 30px;
+  justify-content: space-between;
+
+}.receipt-details table{
+  margin: 40px;
+}
+
+.payment-information th{
+  font-size: 1.2em;
+  text-decoration: underline;
+  color: black;
+}
+
+.payment-information td{
+  font-size: 1.2em;
+  padding: 10px;
+  width: 10px;
+  color: black;
+}
+
+.payment-information td:first-child{
+  width: 200px;
+}
+
+.payment-information td:nth-child(2){
+  width: 10px;
+}
+
+.payment-information td:nth-child(3){
+  width: 150px;
+}
+
+.receiptPackage-information th{
+  font-size: 1.2em;
+  padding-right: 10px;
+  text-align: center;
+  width: 180px;
+  color: black;
+}
+
+.receiptPackage-information td{
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
+  border-top: 1px solid;
+  color: black;
+}
+
+.Package-information-topic{
+  padding-bottom: 15px;
+  text-decoration: underline;
+}
+
+.receipt-amount{
+  height: 60px;
+}
+
+.receipt-amount th{
+  padding:35px;
+}
+
+.receipt-amount-1{
+  padding-left: 200px;
+}
+
+
+.receipt_btn{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.receipt_btn button{
+  margin-bottom: 80px;
+  border-radius: 20px;
+  
+  padding: 15px;
+  background-color: var(--clr-green-500);
+  color: var(--clr-default-txt);
+  font-weight: 200;
+}
+
+.dlt_btn{
+  margin-left: 400px;
+}
+
+.go_homeBtn{
+  margin-right: 400px;
+}
+
+.receipt_btn button:hover{
+  border: 1px solid;
+  font-weight: 400;
+}
