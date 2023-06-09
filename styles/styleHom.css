@@ -54,17 +54,77 @@
 
 /* home page content */
 
-.slider {
+.slider{
+  margin-top: 4.5em;
   width: 100vw;
-  height: 70vh;
-  background-color: blue;
+  height: 74vh;
+  background-color: rgba(59, 64, 70, 0.07);
+  margin-bottom: 0.5em;
+  position: relative;
+  }
+
+  .slider-desc{
+    position: absolute;
+    left: 2%;
+    z-index: 4;
+    background-color: var(--clr-glass-back);
+    padding: 0 0.5em;
+  }
+
+.slider-desc:nth-child(1){
+  top: 65%;
+  border-radius: 15px 15px 0 15px;
 }
 
-.sections {
-  width: 100vw;
-  display: flex;
-  padding: 2rem 0;
-}
+  .slider-desc:nth-child(2){
+    color: rgb(246, 31, 53);
+    text-shadow:
+    -1px -1px 0 rgb(27, 25, 25),  
+     1px -1px 0 rgb(27, 25, 25),
+     -1px 1px 0 rgb(27, 25, 25),
+      1px 1px 0 rgb(27, 25, 25);
+      top: 81%;
+  }
+
+  .slide-container{
+    width: 400%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .slide{
+    height: 72vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 98vw;
+    margin: 1vh 1vw;
+    border-radius: 1em;
+    box-shadow: 1px 1px 10px var(--clr-black-shadow);
+    transition: margin 500ms;
+  }
+
+  .slide:nth-child(1){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.249), rgba(115, 113, 112, 0.145)), url('../images/site_images/elephapnt2-slider.jpg');
+  }
+  .slide:nth-child(2){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.249), rgba(115, 113, 112, 0.145)), url('../images/site_images/monkey-slider.jpg');
+  }
+  .slide:nth-child(3){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.249), rgba(115, 113, 112, 0.145)), url('../images/site_images/Leopard-slide.jpg');
+
+  }
+  .slide:nth-child(4){
+    background-image: linear-gradient(rgba(0, 0, 0, 0.249), rgba(115, 113, 112, 0.145)), url('../images/site_images/bird1-slider.png');
+
+  }
+
+  .sections{
+    width: 100vw;
+    display: flex;
+    padding: 2rem 0;
+  }
 
 .section-end {
   border: 3px solid rgba(220, 249, 158, 0.938);
@@ -133,7 +193,12 @@
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
+
+  .slider-desc:nth-child(2){
+    top: 76.5%;
+  }
+
   .sections {
     flex-direction: column;
     text-align: center;
@@ -176,6 +241,7 @@
     top: 83%;
     left: 48%;
   }
+
 }
 
 /* best deals */
@@ -186,7 +252,7 @@
 
 .pkg-card h3,
 h4 {
-  margin-top: 1.5em;
+  margin-top: 8%;
 }
 
 .pkg-card h4 {
@@ -207,17 +273,28 @@ h4 {
   border-radius: 0.5em
 }
 
-/* testimonials */
+/* box cards*/
 
 .box-card img[alt='quote'] {
   margin-top: 2em;
-  width: 3.5em;
+  width: 10%;
   filter: drop-shadow(0.2em 0.1em 0.3em var(--clr-black-shadow));
 }
 
 .box-card img[alt='star review'] {
   width: 10em;
   padding-bottom: 2em;
+}
+
+/* testimonials */
+
+.review{
+  background-color: var(--clr-aqua-500);
+  box-shadow: none;
+}
+
+.review img{
+  filter: drop-shadow(0.01em 0.01em 0.1em var(--clr-black-400));
 }
 
 /* faq */

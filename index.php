@@ -17,21 +17,32 @@
 </head>
 
 <body>
-    
-<?php require 'includes/header.php' ?>
+
+  <?php require 'includes/header.php' ?>
 
   <main>
-
     <section class="slider">
+      <div class="slider-desc glass-card">
+        <h1 class="primary-header">Are you looking for</h1>
+      </div>
+      <div class="slider-desc glass-card">
+        <h1 class="primary-header">budget- friendly safari packages ?</h1>
+      </div>
+
+      <div class="slide-container">
+        <div class="slide" id="start"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
 
     </section>
+    <hr class="section-end">
     <!-- packages -->
     <section class="sections sec-gallery">
       <div class="left-col">
         <h1 class="secondary-header">PACKAGES</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis reprehenderit voluptatibus, inventore
-          voluptatem totam. Sunt delectus recusandae magnam explicabo iste, architecto pariatur illo ex totam deleniti
-          dignissimos adipisci facilis.</p>
+        <p>Experience the thrill of Sri Lanka's untamed wilderness with our carefully curated safari packages. Encounter majestic wildlife, witness stunning landscapes, and create lifelong memories in the heart of nature. Choose from a range of luxury itineraries designed to provide an unforgettable safari adventure tailored to your preferences.</p>
         <button class="button-default"> View Packages</button>
       </div>
       <div class="right-col">
@@ -49,8 +60,8 @@
     <section class="sections">
       <div class="left-align">
         <h1 class="secondary-header">BEST DEALS</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi dolor laborum minus molestias, aperiam
-          quibusdam neque porro odio cum sed dolores dolorum quas.</p>
+        <p>Discover our exclusive special offer safari packages, designed to elevate your
+           adventure while offering exceptional value.</p>
 
         <div class="box-wrapper">
           <div class="box-card pkg-card">
@@ -99,9 +110,10 @@
     <section class="sections sec-gallery">
       <div class="left-col">
         <h1 class="secondary-header">ACCOMMODATION</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis reprehenderit voluptatibus, inventore
-          voluptatem totam. Sunt delectus recusandae magnam explicabo iste, architecto pariatur illo ex totam deleniti
-          dignissimos adipisci facilis.</p>
+        <p>
+Experience the perfect blend of comfort and immersion as our handpicked accommodations place you in 
+the heart of safari destinations.Immerse yourself in the sounds of nature, indulge in exquisite cuisine, and relax in utmost tranquility,
+ making your accommodation an integral part of your extraordinary safari journey.You can now choose your preffered accommodation location as you make your reservation from our website.</p>
       </div>
       <div class="right-col">
         <div class="img-wrapper">
@@ -123,24 +135,23 @@
             <img src="images/shield.gif" alt="" class="mini-icon">
             <h3 class="heading">Safety Assured</h3>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, nihil impedit ipsa doloribus cumque,
-              illo saepe corporis voluptate reiciendis, faci.
+            At MasterSafari, your safety is our top priority. We work closely with experienced guides and trusted 
+            partners to ensure that every aspect of your safari adventure is conducted with the highest safety standards. 
             </p>
           </div>
           <div class="box-card">
             <img src="images/hotel.gif" alt="" class="mini-icon">
             <h3 class="heading">Best Accommodations</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dignissimos nesciunt nemo rerum qui
-              aut soluta quam, cumque iste aliquam optio aperiam nihil.
+              Our carefully selected accommodation locations offer a range of options to suit every traveler's preferences.
             </p>
           </div>
           <div class="box-card">
             <img src="images/guide.gif" alt="" class="mini-icon">
             <h3 class="heading">Best Guidance</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda eos inventore, nesciunt culpa modi
-              accusamus maiores quas facere consectetur deleniti animi nihil asperiore.
+            <p> 
+              Our expert guides provide the best in knowledge and personalized attention, 
+              ensuring an unforgettable safari experience filled with wonder and discovery.
             </p>
           </div>
         </div>
@@ -155,21 +166,23 @@
           voluptatem totam. Sunt delectus.</p>
 
         <div class="box-wrapper">
-          <div class="box-card">
+          <div class="box-card review">
             <img src="images/quote.png" alt="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis reprehenderit voluptatibus.</p>
+            <p>This safari website exceeded all my expectations. From the carefully curated packages to the exceptional accommodations, every detail was taken care of.</p>
             <img src="images/5star-review.png" alt="star review">
             <h4>Adam Ghil</h4>
           </div>
-          <div class="box-card">
+          <div class="box-card review">
             <img src="images/quote.png" alt="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis reprehenderit voluptatibus,</p>
+            <p>The expert guidance provided an unforgettable experience, and I felt safe 
+              and well-taken care of throughout my journey. Highly recommended for an extraordinary safari adventure.</p>
             <img src="images/4star.png" alt="star review">
             <h4>Bill Smith</h4>
           </div>
-          <div class="box-card">
+          <div class="box-card review">
             <img src="images/quote.png" alt="quote">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi debitis reprehenderit voluptatibus,</p>
+            <p>The accommodations were absolutely stunning, blending luxury with a genuine connection to nature.
+              The knowledgeable guides made every moment come alive with their expertise.</p>
             <img src="images/5star-review.png" alt="star review">
             <h4>Karl Max</h4>
           </div>
@@ -188,21 +201,24 @@
               <input id="question-1" type="checkbox" name="show-hide">
               <label for="question-1">How to do reservation?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem obcaecati ab natus quod animi harum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
+                  obcaecati ab natus quod animi harum.</p>
               </div>
             </div>
             <div class="question-tab">
               <input id="question-2" type="checkbox" name="show-hide">
               <label for="question-2">How to cancel reservation?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem obcaecati ab natus quod animi harum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
+                  obcaecati ab natus quod animi harum.</p>
               </div>
             </div>
             <div class="question-tab">
               <input id="question-3" type="checkbox" name="show-hide">
               <label for="question-3">Reservation cancellation period?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem obcaecati ab natus quod animi harum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
+                  obcaecati ab natus quod animi harum.</p>
               </div>
             </div>
           </div>
@@ -214,8 +230,8 @@
     </section>
   </main>
 
-  <?php include 'includes/footer.php'?>
-  
+  <?php include 'includes/footer.php' ?>
+
   <script src='scripts/scriptGen.js'></script>
 </body>
 
