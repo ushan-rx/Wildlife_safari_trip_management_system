@@ -1,0 +1,287 @@
+.options-wrapper{
+
+    margin-top: 72px;
+    height: 20%;
+    display:flex;
+    align-items: center;
+    background-color:var(--clr-aqua-500)
+
+}
+
+.hotels-wrapper{
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+
+    
+    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(50px,1fr));
+    grid-gap: 10px;
+
+}
+
+.component-box{
+  
+    
+    height: 90px;
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h5{
+    
+    transform: translate(-1%,-140%);
+    position: absolute;
+}
+
+
+/*range slider*/
+p1{
+    transform: translate(-100%,180%);
+    font-size: small;
+    position:absolute;
+
+}
+.slider::after{
+    content:'100$';
+    position: absolute;
+    top: 3.5rem;
+    left: 76%;
+}
+.slider::before{
+    content:'0$';
+    position: absolute;
+    top: 3.5rem;
+    left: 10%;
+}
+
+.slider{
+
+
+    appearance: none;
+    width: 70%;
+    height: 15px;
+     background: var(--clr-green-500);
+     border: #ffffff;
+     -webkit-transition: 0.2s;
+     transition: opacity 0.2s;
+     border-radius: 120px;
+     margin-left: -1.2rem;
+
+}
+
+
+.slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height:20px;
+    border-radius: 5%;
+    background:#ffffff;
+    cursor:pointer ;
+   
+    
+  }
+  
+  .slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height:10px;
+    border-radius: 5%;
+    background:#ffffff;
+    cursor:pointer ;
+    
+  }
+
+
+
+/*calender*/
+
+input[type="date"]{
+
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    background: var(--clr-green-500);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+/* input stepper*/
+.guest-wrapper{
+
+    position: absolute;
+    display: flex;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background: var(--clr-green-500);
+    align-items: center;
+}
+
+.guest-wrapper .button{
+
+     width: 60px;
+     cursor: pointer;
+
+}
+.guest-wrapper input{
+
+    width: 70px;
+    text-align: center;
+    background: var(--clr-green-500);
+}
+
+.button-search {
+
+    cursor: pointer;
+    padding: 0.5em 0.9em;
+    border-radius: 0.5em;
+    border: 0;
+    background-color: var(--clr-aqua-600);
+    color: var(--clr-white-600);
+    font-weight: var(--fw-semibold);
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    font-size: medium;
+  
+  }
+  
+  .button-search:hover {
+  
+    box-shadow: 0 0 0 2px var(--clr-aqua-600),
+      inset 0 0 0 1px #ffffff;
+  }
+  
+  
+
+/*hotel wrapper*/
+
+.slider-container{
+
+    position: relative;
+    overflow: hidden;
+    width: 45vw;
+    height: 100vh;
+    border-radius: 10px;
+    margin: 20px;
+} 
+
+.left-slide{
+
+    height: 100%;
+    width: 55%;
+    top: 0%;
+    left: 0%;
+    position: absolute;
+    transition: transform 0.5s ease-in-out;
+}
+
+ .left-slide > div{
+
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   background-color: var(--clr-green-500);
+   padding: 10px;
+   
+
+
+ }
+  .right-slide{
+
+    height: 100%;
+    width: 45%;
+    top: 0;
+    left: 55%;
+    position: absolute;
+    transition:transform 0.7s ease-in-out;
+  }
+
+.right-slide >div{
+    
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center center;
+}
+
+  button{
+
+    cursor: pointer;
+
+  }
+
+ .slider-container .action-buttons button{
+
+    position: absolute;
+    top: 57%;
+    left: 55%;
+    z-index: 100;
+ }  
+  
+ .slider-container .action-buttons .up-button{
+
+    transform:translateY(-100%) ;
+
+ }
+  
+ .slider-container .action-buttons .down-button{
+
+    transform:translatex(-100%) ;
+
+ }
+ 
+  .checked{
+    color: orange;
+  }
+ 
+  p {
+    font-size:medium;
+    margin: 10px;
+  }
+  
+  h3{
+
+    transform: translate(17rem,3rem);
+  }
+  .button-reserve{
+
+    cursor: pointer;
+    padding: 0.2em 0.7em;
+    border-radius: 0.5em;
+    border: 0;
+    background-color: var(--clr-aqua-600);
+    color: var(--clr-white-600);
+    font-weight: var(--fw-semibold);
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    font-size: medium;
+    transform: translate(15rem,42rem);
+
+
+  }
+
+  
+.button-reserve:hover {
+
+    box-shadow: 0 0 0 2px var(--clr-aqua-600),
+    inset 0 0 0 1px #ffffff;
+}
