@@ -1,0 +1,218 @@
+:root {
+
+    --clr-black-500: rgb(13, 13, 13);
+    --clr-black-400: rgb(26, 1, 1);
+    --clr-black-300: rgb(39, 46, 37);
+    --clr-white-600: rgb(255, 255, 255);
+  
+    --ff-primary: 'Roboto Serif', serif;
+    ;
+  
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --clr-default-txt: rgb(255, 255, 255);
+      --clr-default-back: var(--clr-black-500);
+  
+      --clr-green-300: rgb(55, 89, 58);
+      --clr-green-400: rgb(39, 72, 60);
+      --clr-green-500: rgb(11, 54, 51);
+      --clr-aqua-500: rgb(29, 84, 76);
+      --clr-aqua-600: rgb(0, 37, 54);
+      --clr-in-boder: rgba(249, 249, 249, 0.421);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --clr-default-txt: rgb(0, 0, 0);
+      --clr-default-back: var(--clr-white-600);
+  
+      --clr-green-300: rgb(223, 254, 194);
+      --clr-green-400: rgb(195, 255, 135);
+      --clr-green-500: rgb(151, 230, 139);
+      --clr-aqua-500: rgb(136, 235, 208);
+      --clr-aqua-600: rgb(22, 176, 147);
+      --clr-in-boder: rgba(0, 0, 0, 0.421);
+    }
+  }
+
+
+/* ******************** get costomer details style *********************** */
+.payment{
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.payment-hide{
+  visibility: hidden;
+}
+
+.payment-box{
+  position: relative; 
+  margin: 150px;
+  width: 600px;
+  height: 1150px; 
+  background-color: var(--clr-green-500);
+  border: 3px solid var(--clr-in-boder);
+  border-radius: 20px;
+}
+
+.payment-box > form{
+  margin-left: 4em;
+}
+
+h2{
+  font-size: 1.5em;
+  color: var(--clr-default-txt);
+  margin-top: 3em;
+}
+
+.salutation > select{
+  margin-top: 3em;
+  margin-bottom: 3em;
+  color: var(--clr-default-txt);
+  border: none;
+  font-size: 1em;
+  background-color:var(--clr-default-back);
+  border-radius: 2em;
+  padding: 0.5em 2em;
+  text-align: center;
+}
+
+.salutation > label{
+  margin-right: 1em;
+  font-size: 1em;
+}
+
+.salutation > option{
+  background-color: var(--clr-green-500);
+  color: var(--clr-default-txt);
+  font-size: 1em;
+}
+
+.inputbox{
+  margin-bottom: 4em;
+}
+
+.inputbox > label{
+  font-size: 1em;
+  display: flex;
+}
+
+.inputbox > input{
+  position: absolute;
+  padding-left: 5em;
+  margin-top: 0.5em;
+  height: 2em;
+  width: 450px;
+
+  background-color: var(--clr-default-back);
+  border: none;
+  border-radius: 2em;
+  cursor: text;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.payMethord-box{
+  position: relative;
+  display: flexbox;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 450px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.726);
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 40px;
+  color: var(--clr-default-text);
+}
+.selected {
+  background-color: var(--clr-green-300);
+  border: 2px solid var(--clr-default-txt);
+  
+}
+  
+.visaImage{
+  position: absolute;
+  left: 40px;
+}
+
+.box > h4{
+  text-decoration: none;
+  } 
+                   
+.payBox{
+  position: absolute;
+  left: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 530px;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.525);
+  margin-top: 0px;
+  border-radius: 20px;
+}
+
+.amount{
+  position: absolute;
+  left: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 200px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.423);
+  border-radius: 30px;
+
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.104);
+}
+                          
+.USD{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.payButton{
+  font-size: 1.2em;
+  color: #0044ff; 
+  font-style: italic;
+  font-weight: bolder;
+  width: 120px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.683);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.payButton:hover{
+  color: #da1e1e; 
+}
+
+.pay{
+  position: absolute;
+  right: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+}
+
+
+
+
