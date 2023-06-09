@@ -1,0 +1,135 @@
+
+/*terms & conditions styles here*/
+.hero{
+    color: var(--clr-default-txt);
+    overflow: hidden; 
+  }
+  
+  .container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 240vh;
+    background-image: url("../images/2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+  }
+  
+  /*button styles*/
+  .inner-section{
+    text-align: justify;
+    background-color: #0d0c0c;
+  }
+  
+  .skills{
+    position:absolute;
+   
+    color: #cb1919;
+    border-radius:10px;
+    margin-top: 6%; 
+    left: 40%;
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .skills button{
+    display: inline-block;
+    background-color: rgb(243, 218, 185);
+    color: black;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    
+  }
+  
+  .skills button:hover{
+    background-color: #69dbed;
+    transform: scale(1.1);
+  }
+  
+  /*learn more button here*/
+  .hero-content button{
+    display: inline-block;
+    background-color: antiquewhite;
+    color: black;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .hero-content button:hover{
+    background-color: #ff6347;
+    transform: scale(1.1);
+  
+  }
+  /*to here*/
+  
+  .heding{
+    font-size: 30px;
+    top: 40%;
+  }
+  
+  .heding h1{
+    text-align: center;
+    margin-top: 6%; 
+    color: rgba(227, 92, 19, 0.97);
+  }
+  
+  .hero-content{
+    flex: 1;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-family: sans-serif;
+    color: var(--clr-default-txt);
+    margin: 40px 25px;
+  }
+  
+  .hero-content h3{
+    
+    margin-bottom: 10px;
+    color: rgba(146, 18, 6, 0.97);
+  }
+  
+  .hero-content h4{
+    text-decoration: underline;
+    position: relative;
+    margin-left: 4%;
+    margin-bottom: 40px;
+    color: var(--clr-default-txt);
+  }
+  
+  .hero-content ol{
+    position: relative;
+    margin-right: 10%; 
+    margin-left: 6%;
+    
+  }
+  
+  .hero-content ul{
+    position: relative;
+    margin-right: 10%; 
+    margin-left: 6%;
+  }
+  
+  .hero-content li{
+    position: relative;
+    margin-right: 10%; 
+    margin-left: -1%;
+    
+  }
+  /*to here*/
+  
+  
