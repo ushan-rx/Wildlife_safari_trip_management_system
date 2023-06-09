@@ -1,0 +1,130 @@
+
+/*imasha code here*/
+.hero{
+  position: relative;
+  margin-top: 1.7%;
+  background-color: var(--clr-default-back);
+  color: var(--clr-default-txt);
+  overflow: hidden;
+}
+
+/*button styles*/
+.inner-section{
+  text-align: justify;
+  background-color: #0d0c0c;
+}
+
+.skills{
+  position:relative;
+  margin: 0;
+  color: #cb1919;
+  border-radius:10px;
+  margin-top: 6%;
+  left: 40%;
+  /*min-height:30px; 
+  min-width: 120px;*/
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.skills button{
+  display: inline-block;
+  background-color: rgb(243, 218, 185);
+  color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  
+}
+
+.skills button:hover{
+  background-color: #69dbed;
+  transform: scale(1.1);
+}
+
+.heding{
+  font-size: 38px;
+  position: relative;
+  margin-top: -2.5%;
+
+}
+
+.heding h1{
+  text-align: center;
+  color: rgba(227, 92, 19, 0.97);
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 65px auto;
+}
+
+.hero-content{
+  flex: 1;
+  width: auto;
+  height: auto;
+  color: var(--clr-default-txt);
+  margin: 0px 25px;
+  /*animation: fadeInup 2s ease;*/
+}
+
+.hero-content h2{
+  margin-bottom: 10px;
+  color: rgba(245, 184, 152, 0.97);
+}
+
+.hero-content h4{
+  margin-bottom: 40px;
+  text-decoration: underline;
+  color: var(--clr-default-txt);
+}
+
+.hero-content p{
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: var(--clr-default-txt);
+}
+
+.hero-content button{
+  display: inline-block;
+  background-color: antiquewhite;
+  color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover{
+  background-color: #ff6347;
+  transform: scale(1.1);
+
+}
+
+.hero-image{
+  flex: 1;
+  width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-image img{
+  border: none;
+
+}
+  
+  

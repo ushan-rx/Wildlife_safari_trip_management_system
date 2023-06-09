@@ -1,0 +1,168 @@
+
+/*imasha code here*/
+.hero{
+  position: relative;
+  margin-top: 5%;
+  background-color: var(--clr-default-back);
+  color: var(--clr-default-txt);
+  overflow: hidden;
+}
+
+/*button styles*/
+.inner-section{
+  text-align: justify;
+  background-color: #0d0c0c;
+}
+
+.skills{
+  position:absolute;
+  margin: 0;
+  color: #cb1919;
+  border-radius:10px;
+  top: 2%;
+  left: 40%;
+  /*min-height:30px; 
+  min-width: 120px;*/
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.skills button{
+  display: inline-block;
+  background-color: rgb(243, 218, 185);
+  color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  
+}
+
+.skills button:hover{
+  background-color: #69dbed;
+  transform: scale(1.1);
+}
+
+.heding{
+  font-size: 30px;
+  top: 40%;
+
+}
+
+.heding h1{
+  text-align: center;
+  color: rgba(227, 92, 19, 0.97);
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 65px auto;
+}
+
+.hero-content{
+  flex: 1;
+  width: auto;
+  height: auto;
+  color: var(--clr-default-txt);
+  margin: 0px 25px;
+  /*animation: fadeInup 2s ease;*/
+}
+
+.hero-content h2{
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: rgba(245, 184, 152, 0.97);
+}
+
+.hero-content p{
+  /*font-size: 24px;*/
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: var(--clr-default-txt);
+}
+
+.hero-content button{
+  display: inline-block;
+  background-color: antiquewhite;
+  color: black;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.hero-content button:hover{
+  background-color: #ff6347;
+  transform: scale(1.1);
+
+}
+
+/*image slider*/
+.hero-image{
+  flex: 1;
+  width: 600px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+}
+
+.images{
+  display: flex;
+  width: 100%;
+}
+
+.images img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.images input{
+  display: none;
+}
+
+.dots{
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.dots label{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: solid #fff 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin:3px;
+}
+
+.dots label:hover{background: #fff;}
+
+#img1:checked ~ .m1{
+  margin-left: 0%;
+}
+
+#img3:checked ~ .m3{
+  margin-left: -100%;
+}
+/*to here*/
+
+
+
+
+
+
