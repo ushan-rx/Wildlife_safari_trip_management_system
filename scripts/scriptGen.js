@@ -32,8 +32,25 @@ if (document.getElementById('nav_user_icon') != null) {
 
 // home page ..........
 
-// pkg section - photo slider
+// hero slider
 
+var margin_val = 1;
+
+setInterval(function slide(){
+        console.log(margin_val);
+        document.getElementById('start').style.marginLeft = margin_val+"vw";
+        if(margin_val == -299){
+            margin_val = 1;
+        }else{
+            margin_val -= 100;
+        }
+    
+}, 5000);
+
+
+
+
+// photo slider
 let nxt_button = document.querySelectorAll('.gallery-btn');
 let slide_photos_pkg = document.querySelectorAll('.pkg-img');
 let slide_photos_accomo = document.querySelectorAll('.accomo-img');
@@ -52,6 +69,7 @@ for (let i = 0; i < nxt_button.length; i++) {
     });
 
 }
+
 // change images when button pressed
 function changeImg(slide_photos) {
 

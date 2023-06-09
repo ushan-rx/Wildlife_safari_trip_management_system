@@ -1,4 +1,3 @@
-
 :root {
   /* color related */
   --clr-black-500: rgb(13, 13, 13);
@@ -48,7 +47,7 @@
     --clr-default-txt: rgb(239, 239, 239);
     --clr-default-back: var(--clr-black-500);
 
-    --clr-green-300: rgb(55, 89, 58);
+    --clr-green-300: rgb(33, 79, 38);
     --clr-green-400: rgb(39, 72, 60);
     --clr-green-500: rgb(11, 54, 51);
     --clr-aqua-500: rgb(29, 84, 76);
@@ -56,6 +55,7 @@
 
     --clr-black-shadow: rgba(143, 235, 109, 0.46);
     --clr-txt-shade1: rgb(240, 227, 211);
+    --clr-glass-back: rgba(0, 0, 0, 0.35);;
   }
 }
 
@@ -72,6 +72,7 @@
 
     --clr-black-shadow: rgba(41, 47, 39, 0.273);
     --clr-txt-shade1: rgba(13, 12, 51, 0.78);
+    --clr-glass-back: rgba(255, 255, 255, 0.512);
   }
 }
 
@@ -184,6 +185,18 @@ button {
     inset 0 0 0 1px #ffffff;
 }
 
+.glass-card{
+  -webkit-backdrop-filter: blur( 5px );
+  backdrop-filter: blur( 1px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: var(--clr-glass-back);
+  border-radius: 15px;
+  
+}
+
+::selection{
+  background-color: rgba(163, 156, 156, 0.29);
+}
 
 /* ................. header styles ..........*/
 
