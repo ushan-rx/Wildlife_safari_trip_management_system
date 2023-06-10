@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/wildContact.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleContact.css'>
 
 </head>
 

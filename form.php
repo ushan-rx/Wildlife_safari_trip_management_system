@@ -4,8 +4,9 @@
 <?php include 'classes/connection.php' ?>
 
 <?php
+header('Refresh: 1; url=contact.php');
 
-header('Refresh: 1; url=wildContact.php');
+
                     $inquiry_id=$_POST['inquiry_id'];
                     $full_name = $_POST['full_name'];
                     $email = $_POST['email'];
