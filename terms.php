@@ -16,11 +16,9 @@
 
 </head>
 
-
 <body>
 
 <?php require 'includes/header.php' ?>
-//your code here
 <section class="hero"></section>
 
     <div class="container"></div>
@@ -110,17 +108,11 @@
                     but these penalties are dependent on policies of our suppliers.</li>
             </ul>
             <br>
-    
-            <button class="cta-button">Learn More</button>
         </div>
     </section>    
 
-  //to here
-
   <?php include 'includes/footer.php'?>
 
-
-  <script src='script.js'></script>
 </body>
 
 </html>

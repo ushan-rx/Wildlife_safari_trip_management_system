@@ -66,7 +66,7 @@
                         </span>
                     </div>
 
-                    <label class="large-field">Agree to our <a href="#"> terms and conditions</a>
+                    <label class="large-field">Agree to our <a href="terms.php"> terms and conditions</a>
                         <input type="checkbox" name="terms" id="terms" >
                     </label>
 

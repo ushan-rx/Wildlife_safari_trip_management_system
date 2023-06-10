@@ -40,7 +40,7 @@
   transform: translate(-2.2em);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
 
   .box-wrapper {
     flex-direction: column;
@@ -311,6 +311,11 @@ h4 {
   display: flex;
 }
 
+.faq-left button{
+  width: max-content;
+  margin: 1em 45% !important;
+}
+
 .faq-left {
   flex-direction: column;
 }
@@ -390,12 +395,22 @@ h4 {
 }
 
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:990px) {
   .faq-right {
     display: none;
   }
 
   .faq-left {
     width: 100%;
+  }
+
+  .faq-left button{
+    margin: 1em 50% !important;
+    transform: translateX(-3.5em) !important;
+  }
+
+  .left-align .button-default{
+    margin: 2em 0;
+    transform: translate(0);
   }
 }

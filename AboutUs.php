@@ -19,7 +19,6 @@
 
 </head>
 <body>
-//your code here
 <?php require 'includes/header.php' ?>
 
 
@@ -49,7 +48,6 @@
           so all you have to do is, enjoy the tour. This is at the core of our efforts, at all levels of the business. 
           Our entire team, has lived, worked and travelled across the country.
           Collectively, we have the experience, comprehensive knowledge and enthusiasm, to plan and create the perfect safari, just for you.</p>
-          <button class="cta-button">Learn More</button>
       </div>
       <div class="hero-image">
         <div class="images">
@@ -66,12 +64,6 @@
     </div>
 
   </section>
-  
-//here
-
-
   <?php include 'includes/footer.php' ?>
-
-  <script src='script.js'></script>
 </body>
 </html>
