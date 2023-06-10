@@ -1,9 +1,9 @@
 <footer>
 
     <ul class="footer-list">
-      <li><a href="" class="footer-links">About Us</a></li>
-      <li><a href="" class="footer-links">User Guide</a></li>
-      <li><a href="" class="footer-links">Terms and conditions</a></li>
+      <li><a href="AboutUs.php" class="footer-links">About Us</a></li>
+      <li><a href="userGuide.php" class="footer-links">User Guide</a></li>
+      <li><a href="terms.php" class="footer-links">Terms and conditions</a></li>
       <li><a href="" class="footer-links">Contact Us</a></li>
     </ul>
 

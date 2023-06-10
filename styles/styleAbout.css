@@ -102,11 +102,6 @@
   transition: 0.3s ease;
 }
 
-.hero-content button:hover{
-  background-color: #ff6347;
-  transform: scale(1.1);
-
-}
 
 /*image slider*/
 .hero-image{
@@ -120,11 +115,11 @@
 
 .images{
   display: flex;
-  width: 100%;
+  width: 200%;
 }
 
 .images img{
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: 10px;
   transition: all 0.15s ease;
@@ -156,8 +151,8 @@
   margin-left: 0%;
 }
 
-#img3:checked ~ .m3{
-  margin-left: -100%;
+#img3:checked ~ .m1{
+  margin-left: -50%;
 }
 /*to here*/
 

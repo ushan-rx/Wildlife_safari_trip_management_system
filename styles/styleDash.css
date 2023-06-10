@@ -1,7 +1,101 @@
-
-
-.logo-section{
-    margin-top: 1rem;
-    background-color: white;
+:root {
+    --main-bg-color: rgb(0, 157, 99);
+    --main-text-color: rgb(13, 169, 104);
+    --second-text-color: rgb(164, 167, 174);
+    --dark-text-color: rgb(10, 54, 34);
+    --second-bg-color: rgb(193, 239, 222);
 }
 
+
+.site-icon img {
+    width: 2em;
+    display: inline;
+}
+
+.site-icon img:nth-child(2) {
+    width: 6em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+
+.primary-txt {
+    color: var(--main-text-color);
+}
+
+.sidebar-txt {
+    color: var(--second-text-color);
+}
+
+.navbar-txt {
+    color: var(--dark-text-color);
+}
+
+.primary-bg {
+    background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+    background-color: var(--second-bg-color);
+}
+
+
+#wrapper {
+    overflow-x: hidden;
+    background-image: linear-gradient(to top,
+            rgb(193, 240, 217),
+            rgb(210, 253, 234),
+            rgb(210, 250, 233),
+            rgb(217, 250, 237),
+            rgb(217, 237, 230));
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+    padding: 20px 30px;
+}
+
+.list-group-item.selected {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}

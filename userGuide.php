@@ -18,8 +18,6 @@
 
 <body>
 <?php require 'includes/header.php' ?>
-
-
 <section class="hero">
   <div class="inner-section">
     <div class="skills">
@@ -51,7 +49,6 @@
             <p>Sri Lanka is our home; we have been there and done that. By allowing us to plan the trip for you, 
           we can provide you with more realistic expectations than trying to figure everything out on your own, based on suggestions from booking 
           engines or big off-the-shelf packaged companies that have never been to Sri Lanka.</p><br>
-          <button class="cta-button">Learn More</button>
       </div>
       <div class="hero-image">
         <div class="images">
@@ -63,10 +60,7 @@
 
   </section>
   
-
   <?php include 'includes/footer.php'?>
-  
-  <script src='script.js'></script>
 </body>
 
 </html>

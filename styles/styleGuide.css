@@ -95,23 +95,6 @@
   color: var(--clr-default-txt);
 }
 
-.hero-content button{
-  display: inline-block;
-  background-color: antiquewhite;
-  color: black;
-  padding: 2px 6px;
-  border-radius: 5px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.hero-content button:hover{
-  background-color: #ff6347;
-  transform: scale(1.1);
-
-}
 
 .hero-image{
   flex: 1;
