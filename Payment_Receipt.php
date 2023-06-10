@@ -37,20 +37,23 @@
 
           <div class="cardnumber">
             <label for="cardNumber">Card Number:</label>
-            <input type="text" id="cardNumber" placeholder="Card Number" required>
+            <input type="text" id="cardNumber" placeholder="Card Number" maxlength="19" onkeypress="cardspace()" required>
           </div>
 
           <div class="card-oneline">
+
             <div class="expire-date">
               <label for="expirationDate">Expiration Date:</label>
-              <input type="text" id="expirationDate" placeholder="MM/YY" required>
+              <input type="text" id="expirationDate" placeholder="MM/YY" maxlength="5" onkeypress="addSlashes()" required>
             </div>
 
             <div class="cvv">
               <label for="cvv">CVV:</label>
               <input type="text" id="cvv" placeholder="CVV" required>
             </div>
+
           </div>
+          
           <div class="card-button">
             <input type="submit" value="PAY">
           </div>
@@ -64,7 +67,7 @@
   include 'process_BillDetails.php';   /*DB - recipt details*/
 ?>
 
-  <section id="receipt">
+  <section id="receipt" class="receipt">
 
     <div id="pdf" >
       <div class="payment-receipt">

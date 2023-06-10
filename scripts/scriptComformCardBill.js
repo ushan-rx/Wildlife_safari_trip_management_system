@@ -19,6 +19,7 @@ cardPayButton.addEventListener('submit', function(event) {
 })
 
 
+
 //card number space(0000 0000 0000 0000)
 function cardspace(){
   var cardNumbeV = document.getElementById('cardNumber').value;
@@ -40,6 +41,7 @@ function addSlashes(){
   document.getElementById('expirationDate').max = 1;
   }
 }
+
 
 
 // for download the receipt
