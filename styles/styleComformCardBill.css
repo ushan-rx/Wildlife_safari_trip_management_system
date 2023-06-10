@@ -21,6 +21,7 @@
       --clr-aqua-500: rgb(29, 84, 76);
       --clr-aqua-600: rgb(0, 37, 54);
       --clr-in-boder: rgba(249, 249, 249, 0.421);
+      --clr-in-backgrnd: rgba(0, 0, 0, 0.203);
     }
   }
   
@@ -35,6 +36,7 @@
       --clr-aqua-500: rgb(136, 235, 208);
       --clr-aqua-600: rgb(22, 176, 147);
       --clr-in-boder: rgba(0, 0, 0, 0.421);
+      --clr-in-backgrnd: rgba(255, 255, 255, 0.282);
     }
   }
 
@@ -82,10 +84,11 @@
 .bill{
   border: 2px solid;
   border-radius: 20px;
-  background-color:rgba(255, 255, 255, 0.282);
-  height: 560px;
+  background-color:var(--clr-in-backgrnd);
+  height: 580px;
   width: 650px;
 }
+
 
 .details td {
   text-align: left;
@@ -196,6 +199,7 @@
   box-sizing: border-box;
   font-size: 14px;
   letter-spacing: 1.5px;
+  background-color:var(--clr-default-back);
   color: var(--clr-default-txt);
 }
 
@@ -232,7 +236,6 @@
   justify-content: center;
   align-items: center;
   height: 800px;
-  background-color: white;
 }
 
 .receipt-box{

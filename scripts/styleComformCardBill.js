@@ -19,6 +19,29 @@ cardPayButton.addEventListener('submit', function(event) {
 })
 
 
+//card number space(0000 0000 0000 0000)
+function cardspace(){
+  var cardNumbeV = document.getElementById('cardNumber').value;
+
+  if(cardNumbeV.length == 4 || cardNumbeV.length == 9 || cardNumbeV.length == 14){ 
+  document.getElementById('cardNumber').value = cardNumbeV + " ";
+  document.getElementById('cardNumber').max = 1;
+  }
+}
+
+
+
+// card expiration date slash (00/00)
+function addSlashes(){
+  var expirationDate = document.getElementById('expirationDate').value;
+
+  if(expirationDate.length == 2 ){ 
+  document.getElementById('expirationDate').value = expirationDate + "/";
+  document.getElementById('expirationDate').max = 1;
+  }
+}
+
+
 // for download the receipt
 var pdf_receipt = document.getElementById('pdf');
 
