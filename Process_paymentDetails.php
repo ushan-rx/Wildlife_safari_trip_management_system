@@ -1,15 +1,24 @@
-<?php  //for enter the details of user to the payment table
-
-// require_once 'test_session.php';
+<?php  
 
 require 'classes/connection.php';
 require 'classes/generateId.php';
 
 session_start();
-
+$rid = $_SESSION['reservation_id'];
 $dbConnect = Database::getConnection();
 
 
+//for show the  total amount
+
+    $amount_sql = "SELECT total_price  FROM reservation WHERE reservation_id = '$rid'";
+    $resultAmount = Database::search($amount_sql);
+    $total_amount = $resultAmount->fetch_assoc();
+
+
+
+//for enter the details of user to the payment table
+
+if(isset($_POST['submit'])) {
     $rid = $_SESSION['reservation_id'];
     $user_id = "user123";
 
@@ -51,7 +60,7 @@ $dbConnect = Database::getConnection();
         die("Error inserting data: ");
     }
 
-   
+}
 
 
 

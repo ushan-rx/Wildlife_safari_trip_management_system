@@ -22,7 +22,8 @@
 <body>
 
   <?PHP include 'includes/header.php'; ?>
-   <!-- your code here -->
+  <?PHP include 'Process_paymentDetails.php'; ?> 
+
 
   <section id="payment">
     <div class="payment">
@@ -80,7 +81,7 @@
         <div class="paym">
           <div class="payBox">
             <div class="amount">
-              <p class="USD">USD 500 </p>
+            <p class="USD">USD <?PHP echo $total_amount['total_price'] ?></p>
             </div>
             <div class="pay">
               <input type="submit" class="payButton"  name="submit" value="PAY">

@@ -5,7 +5,7 @@ require 'classes/generateId.php';
 
 $dbConnect = Database::getConnection();
 
-// session_start();
+session_start();
 
 // $package_ID = $_POST['pkg_id'];
 // $date = $_POST['date'];
