@@ -1,0 +1,72 @@
+.container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    border: #333;
+  
+  }
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-size: medium;
+    text-align: center;
+  }
+  
+  .form .input-box {
+  
+    margin-top: 20px;
+  }
+  .input-box label {
+    color: #333;
+  }
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    color: #707070;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+  
+  input[type=submit] {
+  
+    cursor: pointer;
+    padding: 0.5em 0.9em;
+    border-radius: 0.5em;
+    border: 0;
+    background-color: rgb(166, 228, 166);
+    color: white;
+    font-weight: var(--fw-semibold);
+    width: 80px;
+    height: 40px;
+    font-size: medium;
+    margin-top: 30px;
+    
+  
+  }
+  
+  input[type=submit]{
+  
+    box-shadow: 0 0 0 2px  rgb(114, 227, 114),
+      inset 0 0 0 1px #ffffff;
+  }
+  
