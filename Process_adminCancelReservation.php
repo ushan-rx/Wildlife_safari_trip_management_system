@@ -1,6 +1,5 @@
 <?php
-
-require 'classes/connection.php';
+require_once 'classes/connection.php';
 require 'classes/generateId.php';
 
 $dbConnect = Database::getConnection();

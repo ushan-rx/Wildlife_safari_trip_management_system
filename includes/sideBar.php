@@ -1,5 +1,5 @@
 <?php
-include 'classes/connection.php';
+require 'classes/connection.php';
 
 session_start();
 
@@ -28,13 +28,13 @@ if (empty($_SESSION['staff_ses'])) {
                 </span>
             </div>
             <div class="list-group list-group-flush my-3">
-                <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent  selected">
+                <a href="adminDashboard.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent  selected">
                     <i class="fa-solid fa-gauge-high me-2"></i>Dashboard
                 </a>
                 <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-comments me-2"></i>Feedback/Inquiry
                 </a>
-                <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
+                <a href="adminCancelReservation.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-table-list me-2"></i>Reservations
                 </a>
                 <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
