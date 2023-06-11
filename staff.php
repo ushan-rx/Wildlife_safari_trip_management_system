@@ -43,41 +43,31 @@
                             <div class="input-box">
                                 <label>First Name </lable>
                                 <input type="text"  name="fname"> 
-                                <!-- value=<?php echo $f_name?> required/> -->
+                                
                             </div>
 
                             <div class="input-box">
                                 <label>Last  Name </lable>
                                 <input type="text"  name="lname" >
-                                <!-- value=<?php echo $l_name?>required/> -->
+                            
                             </div>
 
                             <div class="input-box">
                                 <label>Email</lable>
                                 <input type="text" name="email">
-                                 <!-- value=<?php echo $email?> required/> -->
+                                
                             </div>
 
                             <div class="input-box">
                                 <label>Staff ID</lable>
                                 <input type="text"  name="name">
-                                 <!-- value=<?php echo $sid?>required/> -->
+                                
                             </div>
 
-                            <div class="input-box">
-                                <label>Staff type </lable>
-                            <div class ="select-box">
-                                    <select>
-                                        <option>Admin</option>
-                                        <option>Manager</option>
-                                        <option>Other</option>
-                                    </select>
-                            </div>
-                            </div>
-                               <input type="submit" name="submit1"    value="Insert"> 
-                               <input type="submit" name="submit2"    value="Delete">
-                               <input type="submit" name="submit3"    value="Update"> 
-                               <input type="submit" name="submit4"    value="Search"> 
+                            
+                               <input type="submit" name="insert"    value="Insert"> 
+                               <input type="submit" name="delete"    value="Delete">
+                               <input type="submit" name="update"    value="Update"> 
                         </div>      
                    </form>
                   </section>

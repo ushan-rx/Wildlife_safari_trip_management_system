@@ -20,17 +20,34 @@
 </head>
 
 <body>
+   
+  <?php require "includes/header.php";
+  require_once 'classes/connection.php';
+  $pkg_id = '';
+  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    if (isset($_GET['pkg_id'])) {
+      $pkg_id = $_GET['pkg_id'];
+    } else {
+      header("Location:PackageCard.php");
+    }
+  }
 
-  <?php require "includes/header.php" ?>
+  ?>
 
   <main>
-
+    <?php
+    $queryGetDate = "SELECT start_date FROM package WHERE pkg_id = '$pkg_id'";
+    
+    $resultset = Database::search($queryGetDate);
+    if ($resultset) {
+      $row = $resultset->fetch_assoc();
+      $getDate = $row['start_date'];
+    }
+    ?>
     <form action="Accomodation.php" method="post">
       <div class="options-wrapper">
-
-
         <div class="container">
-
+          <input type="hidden" value="<?php $pkg_id ?>" name="pkg_id">
           <div class="component-box">
             <h5>Price/Night</h5>
             <input type="range" min="0" max="100" value="0" class="slider" id="Range" name="price">
@@ -39,9 +56,8 @@
 
           <div class="component-box">
             <h5>Check in</h5>
-            <input type="date" step="7" value="2023-06-03" name="date">
+            <input type="date" step="7" value="<?php echo (isset($getDate)) ? $getDate : "2023-06-03"; ?>" name="date">
           </div>
-
           <div class="component-box">
             <h5>No of Guests</h5>
             <div class="guest-wrapper">
@@ -68,17 +84,12 @@
       </div>
     </form>
 
-
-
-
-
-
     <div class="hotels-wrapper">
 
       <div class="slider-container">
         <?php require 'process_Accomodation.php'; ?>
 
-        
+
 
       </div>
 
