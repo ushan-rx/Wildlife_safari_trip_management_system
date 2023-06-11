@@ -48,10 +48,10 @@
 
                   <input style="display:none;" type="text" value="$49.99" name="price">
                   <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="2 Persons" name="persons">
-                  <input style="display:none;"  type="text" value="2 nights" name="nights">
-                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
-                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
+                  <input style="display:none;"  type="text" value="Jetwing Yala" name="accomadation">
+                  <input style="display:none;"  type="text" value="2 person" name="persons">
+                  <input style="display:none;"  type="text" value="3 night" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2022" name="date">
 
                   <button type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
@@ -75,10 +75,10 @@
                 
                 <input style="display:none;" type="text" value="$49.99" name="price">
                   <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="2 Persons" name="persons">
-                  <input style="display:none;"  type="text" value="2 nights" name="nights">
-                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
-                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
+                  <input style="display:none;"  type="text" value="Wild Trails Yala by Suri" name="accomadation">
+                  <input style="display:none;"  type="text" value="2 person" name="persons">
+                  <input style="display:none;"  type="text" value="3 night" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2022" name="date">
                 
                 <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
@@ -103,10 +103,10 @@
                   
                 <input style="display:none;" type="text" value="$49.99" name="price">
                   <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="2 Persons" name="persons">
-                  <input style="display:none;"  type="text" value="2 nights" name="nights">
-                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
-                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
+                  <input style="display:none;"  type="text" value="Leopard Trails Yala" name="accomadation">
+                  <input style="display:none;"  type="text" value="2 person" name="persons">
+                  <input style="display:none;"  type="text" value="3 night" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2022" name="date">
                 
                 <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
