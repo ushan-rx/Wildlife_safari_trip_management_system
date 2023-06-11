@@ -135,3 +135,17 @@
 
 
 
+
+/* inquiry */
+
+
+.form-group{
+    height: 150% !important;
+
+}
+
+#selected-item{
+    height: 80% !important;
+}
+
+

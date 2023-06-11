@@ -25,7 +25,7 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-right-arrow-left primary-txt fs-3 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0 navbar-txt">Dashboard</h2>
+                    <h2 class="fs-2 m-0 navbar-txt">Reservations</h2>
                 </div>
             </nav>
 
