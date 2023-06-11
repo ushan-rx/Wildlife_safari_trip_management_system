@@ -35,18 +35,20 @@
                
                 <section class="container">
                 <?php require 'process_Staff.php'; ?> 
+
                 <header>Staff Details <header> 
                 <form action = "process_Staff.php" method="post">
+                    
                         <div class="form">
                             <div class="input-box">
                                 <label>First Name </lable>
-                                <input type="text"  name="f_name"> 
+                                <input type="text"  name="fname"> 
                                 <!-- value=<?php echo $f_name?> required/> -->
                             </div>
 
                             <div class="input-box">
                                 <label>Last  Name </lable>
-                                <input type="text"  name="l_name" >
+                                <input type="text"  name="lname" >
                                 <!-- value=<?php echo $l_name?>required/> -->
                             </div>
 
@@ -58,7 +60,7 @@
 
                             <div class="input-box">
                                 <label>Staff ID</lable>
-                                <input type="text"  name="id">
+                                <input type="text"  name="name">
                                  <!-- value=<?php echo $sid?>required/> -->
                             </div>
 
