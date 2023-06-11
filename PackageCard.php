@@ -19,12 +19,33 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
-  <!-- <link rel='stylesheet' type='text/css' media='screen' href='styles/style2.css'> -->
+  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/style2.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='PackageCard.css'>
 
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/stylePackageCard.css'>
+</head>
 
-  <?php require 'includes/header.php' ?>
+<body>
+  <header>
+    <div class="navbar">
+      <a href="#" class="site-icon">
+        <img src="images/deerlogo.png" alt="website logo">
+        <img src="images/sitename.png" alt="website name">
+      </a>
+      <ul id="nav-links">
+        <li><a href="" class="links">Home</a></li>
+        <li><a href="" class="links">Packages</a></li>
+        <li><a href="" class="links">Destinations</a></li>
+        <li><a href="" class="links">Testimonials</a></li>
+        <li><a href="" class="links">Contact Us</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <button class="button-default button-nav sign-in">Sign In</button>
+        <button class="button-default button-nav">Sign Up</button>
+      </div>
+      <img src="images/menu_black.png" alt="menu icon" class="menu-icon">
+    </div>
+  </header>
 
   <!-- your code here -->
   <!---->
@@ -95,34 +116,41 @@
     </div>
 </div>
 
+     <?php
+        $sql = "SELECT * FROM package";
+        $result = mysqli_query($conn, $sql);
+        $packages = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+        $rowIndex =0;
+        
+        if ($rowIndex < count($packages)) {
+          $specificRow = $packages[$rowIndex];
+          $p1_name = $specificRow['p_name'];
+          $p1_price_per_person = $specificRow['price_per_person'];
+          $p1_description = $specificRow['description'];
+          $p1_no_of_days = $specificRow['no_of_days'];
+        }
+        
+        else {
+            echo "<p class='normal'>No feedbacks yet</p>";
+          }
+    ?> 
 
     <div class="pricing-table">
         <div class="pricing-card">
-            <h3 class="pricing-card-header">Package 01</h3>
-            <div class="price"><sup>$</sup>19.99 </div>
+            <h3 class="pricing-card-header"><?php echo $p1_name ?></h3>
+            <div class="price"><sup>$</sup><?php echo $p1_price_per_person ?> </div>
             <ul class="unorder-safari-packages">
 
             <!-- read data from package -->
-<?php
-    $sql = "SELECT * FROM package";
-    $result = mysqli_query($conn, $sql);
-    $packages = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-    $rowIndex =0;
+      <!-- <li><?php echo $p1_name ?></li>
+      <li>$<?php echo $p1_price_per_person ?></li> -->
+      <li><?php echo $p1_description ?></li>
+      <li><?php echo $p1_no_of_days ?></li>
+      
     
-    if ($rowIndex < count($packages)) {
-      $specificRow = $packages[$rowIndex];
-      echo "<li>{$specificRow['p_name']}</li>";
-      echo "<li>{$specificRow['price_per_person']}</li>";
-      echo "<li>{$specificRow['description']}</li>";
-      echo "<li>{$specificRow['no_of_days']}</li>";
-    }
     
-    else {
-        echo "<p class='normal'>No feedbacks yet</p>";
-      }
-?>
             </ul>
             <a href="#?pkg_id=<?php
                 $rowIndex =0;
@@ -132,26 +160,33 @@
                   ?>" class="order-btn">Order Now</a>
         </div>
 
-        <div class="pricing-card">
-            <h3 class="pricing-card-header">Package 02</h3>
-            <div class="price"><sup>$</sup>29.99 </div>
-            <ul class="unorder-safari-packages">
-
-            <?php
+        <?php
                     $rowIndex =1;
     
                     if ($rowIndex < count($packages)) {
                       $specificRow = $packages[$rowIndex];
-                      echo "<li>{$specificRow['p_name']}</li>";
-                      echo "<li>{$specificRow['price_per_person']}</li>";
-                      echo "<li>{$specificRow['description']}</li>";
-                      echo "<li>{$specificRow['no_of_days']}</li>";
+                      $p2_name = $specificRow['p_name'];
+                      $p2_price_per_person = $specificRow['price_per_person'];
+                      $p2_description = $specificRow['description'];
+                      $p2_no_of_days = $specificRow['no_of_days'];
                     }
                     
                     else {
-                        echo "<p class='normal'>No feedbacks yet</p>";
+                        // echo "<p class='normal'>No feedbacks yet</p>";
                       }
             ?>
+
+        <div class="pricing-card">
+            <h3 class="pricing-card-header"><?php echo $p2_name ?></h3>
+            <div class="price"><sup>$</sup><?php echo $$p2_price_per_person ?></div>
+            <ul class="unorder-safari-packages">
+
+            <li><?php echo $p2_name ?></li>
+            <li>$<?php echo $p2_price_per_person ?></li>
+            <li><?php echo $p2_description ?></li>
+            <li><?php echo $p2_no_of_days ?></li>
+
+
             </ul>
             <a href="#?pkg_id=<?php
                 $rowIndex =2;
@@ -161,25 +196,32 @@
                   ?>" class="order-btn">Order Now</a>
         </div>
 
-        <div class="pricing-card">
-            <h3 class="pricing-card-header">Package 03</h3>
-            <div class="price"><sup>$</sup>199.99 </div>
-            <ul class="unorder-safari-packages">
-            <?php
+        <?php
                     $rowIndex =3;
     
                     if ($rowIndex < count($packages)) {
                       $specificRow = $packages[$rowIndex];
-                      echo "<li>{$specificRow['p_name']}</li>";
-                      echo "<li>{$specificRow['price_per_person']}</li>";
-                      echo "<li>{$specificRow['description']}</li>";
-                      echo "<li>{$specificRow['no_of_days']}</li>";
+                      $p3_name = $specificRow['p_name'];
+                      $p3_price_per_person = $specificRow['price_per_person'];
+                      $p3_description = $specificRow['description'];
+                      $p3_no_of_days = $specificRow['no_of_days'];
                     }
                     
                     else {
-                        echo "<p class='normal'>No feedbacks yet</p>";
+                        // echo "<p class='normal'>No feedbacks yet</p>";
                       }
-            ?>
+        ?>
+
+        <div class="pricing-card">
+            <h3 class="pricing-card-header"><?php echo $p3_name ?></h3>
+            <div class="price"><sup>$</sup><?php echo $p3_price_per_person ?> </div>
+            <ul class="unorder-safari-packages">
+            
+            <li><?php echo $p3_name ?></li>
+            <li>$<?php echo $p3_price_per_person ?></li>
+            <li><?php echo $p3_description ?></li>
+            <li><?php echo $p3_no_of_days ?></li>
+
             </ul>
             <a href="#?pkg_id=<?php
                 $rowIndex =1;
@@ -189,25 +231,34 @@
                   ?>" class="order-btn">Order Now</a>
         </div>
 
+
+        <?php
+        $rowIndex =4;
+
+        if ($rowIndex < count($packages)) {
+          $specificRow = $packages[$rowIndex];
+          $p4_name = $specificRow['p_name'];
+          $p4_price_per_person = $specificRow['price_per_person'];
+          $p4_description = $specificRow['description'];
+          $p4_no_of_days = $specificRow['no_of_days'];
+        }
+        
+        else {
+            // echo "<p class='normal'>No feedbacks yet</p>";
+          }
+?>
+
+
         <div class="pricing-card">
-            <h3 class="pricing-card-header">Package 04</h3>
-            <div class="price"><sup>$</sup>299.99 </div>
+            <h3 class="pricing-card-header"><?php echo $p4_name ?></h3>
+            <div class="price"><sup>$</sup><?php echo $p4_price_per_person ?></div>
             <ul class="unorder-safari-packages">
-            <?php
-                    $rowIndex =4;
-    
-                    if ($rowIndex < count($packages)) {
-                      $specificRow = $packages[$rowIndex];
-                      echo "<li>{$specificRow['p_name']}</li>";
-                      echo "<li>{$specificRow['price_per_person']}</li>";
-                      echo "<li>{$specificRow['description']}</li>";
-                      echo "<li>{$specificRow['no_of_days']}</li>";
-                    }
-                    
-                    else {
-                        echo "<p class='normal'>No feedbacks yet</p>";
-                      }
-            ?>
+          
+            <li><?php echo $p4_name ?></li>
+            <li>$<?php echo $p4_price_per_person ?></li>
+            <li><?php echo $p4_description ?></li>
+            <li><?php echo $p4_no_of_days ?></li>
+
             </ul>
             <a href="#?pkg_id=<?php
                 $rowIndex =2;
@@ -217,25 +268,35 @@
                   ?>" class="order-btn">Order Now</a>
         </div>
 
+        <?php
+        $rowIndex =5;
+
+        if ($rowIndex < count($packages)) {
+          $specificRow = $packages[$rowIndex];
+          $p5_name = $specificRow['p_name'];
+          $p5_price_per_person = $specificRow['price_per_person'];
+          $p5_description = $specificRow['description'];
+          $p5_no_of_days = $specificRow['no_of_days'];
+        }
+        
+        
+        else {
+            // echo "<p class='normal'>No feedbacks yet</p>";
+          }
+?>
+
+
+
         <div class="pricing-card">
-            <h3 class="pricing-card-header">Package 05</h3>
-            <div class="price"><sup>$</sup>399.99 </div>
+            <h3 class="pricing-card-header"><?php echo $p5_name ?></h3>
+            <div class="price"><sup>$</sup><?php echo $p5_price_per_person ?></div>
             <ul class="unorder-safari-packages">
-            <?php
-                    $rowIndex =5;
-    
-                    if ($rowIndex < count($packages)) {
-                      $specificRow = $packages[$rowIndex];
-                      echo "<li>{$specificRow['p_name']}</li>";
-                      echo "<li>{$specificRow['price_per_person']}</li>";
-                      echo "<li>{$specificRow['description']}</li>";
-                      echo "<li>{$specificRow['no_of_days']}</li>";
-                    }
-                    
-                    else {
-                        echo "<p class='normal'>No feedbacks yet</p>";
-                      }
-            ?>
+            
+            <li><?php echo $p5_name ?></li>
+            <li>$<?php echo $p5_price_per_person ?></li>
+            <li><?php echo $p5_description ?></li>
+            <li><?php echo $p5_no_of_days ?></li>
+
             </ul>
             <a href="#?pkg_id=<?php
                 $rowIndex =4;
@@ -250,7 +311,26 @@
 
 
 
-    <?php include 'includes/footer.php'?>
+  <footer>
+
+    <ul class="footer-list">
+      <li><a href="" class="footer-links">About Us</a></li>
+      <li><a href="" class="footer-links">User Guide</a></li>
+      <li><a href="" class="footer-links">Terms and conditions</a></li>
+      <li><a href="" class="footer-links">Contact Us</a></li>
+    </ul>
+
+
+    <ul class="footer-list">
+      <li><a href=""><img src="images/facebook.png" alt="facebook" class="footer-icon"></a></li>
+      <li><a href=""><img src="images/twitter.png" alt="twitter" class="footer-icon"></a></li>
+      <li><a href=""><img src="images/pinterest.png" alt="pinterest" class="footer-icon"></a></li>
+      <li><a href=""><img src="images/insta.png" alt="instagram" class="footer-icon"></a></li>
+    </ul>
+
+    <h6>Copyrights 2023-Present. All Rights Reserved.</h6>
+
+  </footer>
 
 
   <script src='script.js'></script>
