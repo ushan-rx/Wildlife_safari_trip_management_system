@@ -1,0 +1,155 @@
+.account1{
+    background-color: var(--clr-aqua-600);
+    color: var(--clr-default-txt);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom:7%;
+    margin-top: 10%;
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    min-width: 200px;
+    min-height: 350px;
+    
+}
+
+.container1 {
+   
+    
+    padding-right: 100px;
+    
+    margin-right: auto;
+    margin-left: 5%;
+    min-width: 200px;
+    min-height: 350px;
+}
+.container1 h3{
+  
+  position: absolute;
+  left: 30%;
+  bottom: 60%;
+  align-items: center;
+  font-size: 35px;
+  color: skyblue;
+}
+.container1 p{
+  text-align: center;
+}
+
+
+.job-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.j-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.job-title h2{
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+ 
+}
+
+
+.job-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+
+.job-location {
+  
+  font-size: 25px;
+  position: absolute;
+  left: 30%;
+  bottom: 42%;
+  align-items: center;
+  font-size: 35px;
+}
+
+
+
+.job-description {
+  font-size: 25px;
+  position: absolute;
+  left: 30%;
+  bottom: 35%;
+  align-items: center;
+  font-size: 35px;
+
+}
+.job-salary{
+  position: absolute;
+  left: 30%;
+  bottom: 50%;
+  align-items: center;
+  font-size: 35px;
+}
+
+
+.job-btn {
+  display: flex;
+  color: var(--clr-default-txt);
+}
+
+.j-edit {
+  background:  rgba(13, 12, 51, 0.78);
+  color: var(--clr-default-txt);
+  height: 40px;
+  /*padding: 10px;*/
+  align-items: right;
+  margin-top: 30%;
+  margin-bottom: 5%;
+  margin-right: 80%;
+  margin-left: 80%;
+
+  border-width: 300px;
+  height: 35px;
+  border-radius: 5px;
+
+}
+
+
+
+
+
+a.active,
+a:hover {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .j-title {
+    font-size: 20px;
+  }
+
+  .job-item {
+    padding: 10px;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  
+
+  .
+  }
+}
+
