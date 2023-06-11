@@ -29,11 +29,23 @@
             </nav>
 
             <!-- your code here -->
-            <div class="row g-5 my-5">
-                <div class="col">
+            <div class="row g-5 my-2 mx-4 py-4 px-5">
+                <div class="col py-5 m-4 content-wrapper bg-light">
+                    
+                </div>
+                <div class="col py-5 m-4 content-wrapper  bg-light">
                     
                 </div>
             </div>
+            <div class="row g-5 my-2 mx-4 py-4 px-5">
+                <div class="col py-5 m-4 content-wrapper bg-light">
+                    
+                </div>
+                <div class="col py-5 m-4 content-wrapper  bg-light">
+                    
+                </div>
+            </div>
+
 
             <!-- to here -->
         </div>
