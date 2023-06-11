@@ -140,12 +140,13 @@
 
 
 .form-group{
-    height: 150% !important;
-
+    height: 500px !important;
 }
 
 #selected-item{
-    height: 80% !important;
+    height: 75% !important;
 }
 
-
+.list-field{
+    height: 500px !important;
+}

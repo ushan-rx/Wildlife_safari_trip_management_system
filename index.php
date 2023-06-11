@@ -222,7 +222,7 @@ the heart of safari destinations.Immerse yourself in the sounds of nature, indul
               </div>
             </div>
           </div>
-          <button class="button-default">Contact Us</button>
+          <button class="button-default"><a href="contact.php">Contact Us</a></button>
         </div>
         <div class="faq-right">
           <img src="images/faq.png" alt="faq image">
