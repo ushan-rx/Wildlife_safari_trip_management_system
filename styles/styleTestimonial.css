@@ -304,7 +304,7 @@ button:hover{
     margin-bottom: 10px;
 }
 .testimonial{
-    background-color: rgb(5, 65, 13);
+    background-color: white;
     color: black;
     width: 25%;
     border-radius:10px;
@@ -313,7 +313,7 @@ button:hover{
 }
 
 .white{
-    background-color:rgb(8, 85, 75);
+    background-color:white;
 }
 
 .white .name, 

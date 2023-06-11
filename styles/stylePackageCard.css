@@ -1,0 +1,269 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+html{
+    font-size: 15px;
+}*/
+
+body{
+    background: var(--clr-aqua-600);
+    /*font-family: 'Nunito', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;*/
+}
+
+/*All best deals card */
+.cards{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    
+}
+
+/*side best deals card styles*/
+.side-card{
+    background-color: rgb(126, 124, 121);
+    border-radius: 30px;
+    border-style:   solid;
+    border-width: 1px;
+    width: 280px;
+    height: 550px;
+}
+
+
+/*middle best deal card styles*/
+.middle-card{
+    
+    background: var(--clr-green-700);
+    display: flex;
+    align-items: center;
+    transform: scale(1.1);
+    z-index: 1;
+    border-radius: 30px;
+    border-width: 1px;
+    border-style: solid;
+
+    
+}
+/*side-package header (best deal) styles)*/
+.pack{
+    font-size: 40px;
+    font-weight: 900;
+    color: chartreuse;
+           
+}
+
+/*middle-package header (best deal) styles)*/
+.middle-pack{
+    font-size: 40px;
+    font-weight: 900;
+    color: brown;
+}
+
+
+/*middle card price styles $*/
+.middle-card-price{
+    font-size: 3rem;
+    color:white;
+    font-weight:600; /*semi bold*/
+    padding-bottom: 2rem;
+}
+
+/*side card price styles $ */
+.side-card-price{
+    font-size: 3rem;
+    color:white;
+    font-weight:600; /*semi bold*/
+    padding-bottom: 2rem;
+}
+
+.unorderli{
+    margin:2.8rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+    
+}
+
+.unorderli li{
+    list-style-type:none ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.6rem 0;    /*best deal package middle card size*/
+
+    /*margin:2.8rem;*/
+}
+
+/*side cards purchase button (book now)*/
+.side-purchase-btn{
+    margin-top: 1rem;
+    height: 3rem ;
+    width: 13rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(59, 228, 101);
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+/*side cards purchase button (book now) */
+.middle-purchase-btn{
+    margin-top: 1rem;
+    height: 3rem ;
+    width: 13rem ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(232, 241, 234);
+    border: 1px solid;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*package detals underline styles*/
+.bottom-bar{
+    border-bottom: 2px solid rgb(163, 24, 140);
+}
+
+
+
+/*
+.shadow{
+    box-shadow:-5px 5px 15px 1px rgb(119, 201, 51) ; } /*additional work except this*/
+   
+
+
+/*end of the best deal packages style sheet*/
+
+
+
+
+.pricing-table{
+    display: flex;
+   /* flex-wrap: wrap;*/
+    /*justify-content: space-around;
+    /* width: min(1600px,100%); */
+}
+
+/*pricing card (normal) styles */
+.pricing-card{
+    flex:1;
+    max-width: 360px;
+    background-color: forestgreen;
+    margin:20px 3px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    /*color: rgb(42, 161, 165);*/
+    transition: .3s linear;
+    border-radius: 20px;
+
+}
+
+/*pricing card header styles*/
+.pricing-card-header{
+    background-color: rgb(3, 39, 14);
+    display: inline-block;
+    color:rgb(241, 174, 49);
+    padding: 12px 30px;
+    border-radius: 0 0 20px 20px;
+    font-size: 20px;
+    text-transform : uppercase;
+    font-weight: 600;
+    transition: .4s linear;
+
+}
+
+/*pricing card hover color*/
+.pricing-card:hover .pricing-card-header{
+
+    box-shadow: 0 0 0 20em rgb(136, 240, 136);
+    border-radius: 50px;
+}
+
+/*price details*/
+.price{
+    font-size: 50px;
+    font-weight: 600;
+    color: gold;
+    margin: 40px 0;
+    transition: .2s linear;
+
+}
+
+/* $ styles*/
+.price sup{
+    font-weight: 400;
+    
+}
+
+/*
+.pricing-card :hover .price{
+
+    color: rgb(38, 13, 182);
+
+}*/
+
+
+/*safari Details*/
+.pricing-card li{
+    font-size: 16px;
+    padding: 10px ;
+    /*text-transform: uppercase;*/
+}
+
+.order-btn{
+    display: inline-block;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    border: 2px solid rgba(248, 248, 248, 0.205);
+    color: rgb(6, 12, 0);
+    padding: 18px 40px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: .3s linear;
+}
+
+/*order button */
+.order-btn:hover{
+    background-color: rgb(3, 65, 22);
+    color: orange;
+}
+
+/*
+@media screen and (max-width:1100px){
+    .pricing-card{
+        flex: 50%;
+    }
+
+}
+*/
+
+
+/*end of the packages style sheet*/
+ 
+
+
+
