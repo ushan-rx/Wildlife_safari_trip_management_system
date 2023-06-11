@@ -21,7 +21,7 @@
 
 <body>
 
-  <!-- <?PHP include 'includes/header.php'; ?> -->
+  <?PHP include 'includes/header.php'; ?> 
 
   <?php include 'process_comformPaymentDetails.php'; ?>
 
@@ -58,7 +58,7 @@
         <table class="total-payment">
           <tr>
             <td>Total Payment</td>
-            <td>Rs: <?php echo $total_Payment?></td>
+            <td>$<?php echo $total_Payment?></td>
           </tr>
         </table>
       </div>
