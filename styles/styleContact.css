@@ -15,7 +15,7 @@
    left: 0;
    width: 100%;
    min-height: 150vh;
-   background-image: url("9.png");
+   background-image: url("../images/9.png");
    background-repeat: no-repeat;
    background-size: cover;
    z-index: -1;
