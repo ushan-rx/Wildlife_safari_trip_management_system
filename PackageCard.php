@@ -36,16 +36,22 @@
                 <li class="pack">Best Deal</li>
                 <li id="basic" class="side-card-price">&dollar; <!---->
                     49.99</li>
-                    <li class="bottom-bar">2 nights</li>
+                    <li class="bottom-bar">Yala National Park</li>
+                    <li class="bottom-bar"> Jetwing Yala</li>
                     <li class="bottom-bar"> 2 person</li>
-                    <li class="bottom-bar"> include safari</li>
+                    <li class="bottom-bar"> 3 night</li>
+                    <li class="bottom-bar"> 09.09.2022</li>
+
+                    
                     <li>
                     <form method="Get" method="send_best_deals.php">
 
                   <input style="display:none;" type="text" value="$49.99" name="price">
-                  <input style="display:none;"  type="text" value="2 nights" name="nights">
+                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
                   <input style="display:none;"  type="text" value="2 Persons" name="persons">
-                  <input style="display:none;"  type="text" value="include safari" name="accomadation">
+                  <input style="display:none;"  type="text" value="2 nights" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
+                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
 
                   <button type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
@@ -57,16 +63,22 @@
             <li class="middle-pack">Best Deal</li>
             <li id="basic" class="middle-card-price">&dollar;
                 149.99</li>
-                <li class="bottom-bar"> 5 nights </li>
-                <li class="bottom-bar"> 4 person </li>
-                <li class="bottom-bar"> include meal </li>
+
+                <li class="bottom-bar">Yala National Park</li>
+                    <li class="bottom-bar"> Wild Trails Yala by Suri</li>
+                    <li class="bottom-bar"> 2 person</li>
+                    <li class="bottom-bar"> 3 night</li>
+                    <li class="bottom-bar"> 09.09.2022</li>
+                
                 <li>
                 <form method="POST">
                 
-                  <input style="display:none;"  type="text" value="$149.99" name="price">
-                  <input style="display:none;"  type="text" value="5 nights" name="nights">
-                  <input style="display:none;" type="text" value="4 Persons" name="persons">
-                  <input style="display:none;" type="text" value="Include meal" name="accomadation">
+                <input style="display:none;" type="text" value="$49.99" name="price">
+                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
+                  <input style="display:none;"  type="text" value="2 Persons" name="persons">
+                  <input style="display:none;"  type="text" value="2 nights" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
+                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
                 
                 <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
@@ -79,16 +91,22 @@
            <li class="pack">Best Deal</li>
        <li id="basic" class="side-card-price">&dollar;
             99.99</li>
-            <li class="bottom-bar"> 5 nights </li>
-            <li class="bottom-bar"> 2 person </li>
-            <li class="bottom-bar"> include meal </li>
+          
+            <li class="bottom-bar">Yala National Park</li>
+                    <li class="bottom-bar"> Leopard Trails Yala</li>
+                    <li class="bottom-bar"> 2 person</li>
+                    <li class="bottom-bar"> 3 night</li>
+                    <li class="bottom-bar"> 09.09.2022</li>
             
             <li>  
                 <form method="POST">
-                  <input style="display:none;"  type="text" value="$99" name="price">
-                  <input style="display:none;" type="text" value="2 nights" name="nights">
-                  <input style="display:none;" type="text" value="2 Persons" name="persons">
-                  <input style="display:none;" type="text" value="Include Safari" name="accomadation">
+                  
+                <input style="display:none;" type="text" value="$49.99" name="price">
+                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
+                  <input style="display:none;"  type="text" value="2 Persons" name="persons">
+                  <input style="display:none;"  type="text" value="2 nights" name="nights">
+                  <input style="display:none;"  type="text" value="09.09.2223" name="date">
+                  <input style="display:none;"  type="text" value="Yala Hotel" name="accomadation">
                 
                 <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
                 </form>
@@ -110,6 +128,8 @@
           $p1_price_per_person = $specificRow['price_per_person'];
           $p1_description = $specificRow['description'];
           $p1_no_of_days = $specificRow['no_of_days'];
+          
+          
         }
         
         else {
@@ -125,20 +145,18 @@
 
             <!-- read data from package -->
 
-      <!-- <li><?php echo $p1_name ?></li>
-      <li>$<?php echo $p1_price_per_person ?></li> -->
-      <li><?php echo $p1_description ?></li>
-      <li><?php echo $p1_no_of_days ?></li>
       
-    
-    
+            <li><?php echo $p1_description ?></li>
+            <li><?php echo $p1_no_of_days ?>night</li>
+            
+
             </ul>
-            <a href="#?pkg_id=<?php
+            <a href="Accomodation.php?pkg_id=<?php
                 $rowIndex =0;
                 if ($rowIndex < count($packages)) {
                   $specificRow = $packages[$rowIndex];
                   echo $specificRow['pkg_id'];}
-                  ?>" class="order-btn">Order Now</a>
+                  ?>" class="order-btn">PROCEED</a>
         </div>
 
         <?php
@@ -150,6 +168,7 @@
                       $p2_price_per_person = $specificRow['price_per_person'];
                       $p2_description = $specificRow['description'];
                       $p2_no_of_days = $specificRow['no_of_days'];
+                      
                     }
                     
                     else {
@@ -162,23 +181,23 @@
             <div class="price"><sup>$</sup><?php echo $p2_price_per_person ?></div>
             <ul class="unorder-safari-packages">
 
-            <li><?php echo $p2_name ?></li>
-            <li>$<?php echo $p2_price_per_person ?></li>
+            
             <li><?php echo $p2_description ?></li>
-            <li><?php echo $p2_no_of_days ?></li>
+            <li><?php echo $p2_no_of_days ?>night</li>
+            
 
 
             </ul>
-            <a href="#?pkg_id=<?php
-                $rowIndex =2;
+            <a href="Accomodation.php?pkg_id=<?php
+                $rowIndex =1;
                 if ($rowIndex < count($packages)) {
                   $specificRow = $packages[$rowIndex];
                   echo $specificRow['pkg_id'];}
-                  ?>" class="order-btn">Order Now</a>
+                  ?>" class="order-btn">PROCEED</a>
         </div>
 
         <?php
-                    $rowIndex =3;
+                    $rowIndex =2;
     
                     if ($rowIndex < count($packages)) {
                       $specificRow = $packages[$rowIndex];
@@ -186,6 +205,7 @@
                       $p3_price_per_person = $specificRow['price_per_person'];
                       $p3_description = $specificRow['description'];
                       $p3_no_of_days = $specificRow['no_of_days'];
+                      
                     }
                     
                     else {
@@ -198,23 +218,23 @@
             <div class="price"><sup>$</sup><?php echo $p3_price_per_person ?> </div>
             <ul class="unorder-safari-packages">
             
-            <li><?php echo $p3_name ?></li>
-            <li>$<?php echo $p3_price_per_person ?></li>
+            
             <li><?php echo $p3_description ?></li>
-            <li><?php echo $p3_no_of_days ?></li>
+            <li><?php echo $p3_no_of_days ?>night</li>
+            
 
             </ul>
-            <a href="#?pkg_id=<?php
-                $rowIndex =1;
+            <a href="Accomodation.php?pkg_id=<?php
+                $rowIndex =2;
                 if ($rowIndex < count($packages)) {
                   $specificRow = $packages[$rowIndex];
                   echo $specificRow['pkg_id'];}
-                  ?>" class="order-btn">Order Now</a>
+                  ?>" class="order-btn">PROCEED</a>
         </div>
 
 
         <?php
-        $rowIndex =4;
+        $rowIndex =3;
 
         if ($rowIndex < count($packages)) {
           $specificRow = $packages[$rowIndex];
@@ -222,6 +242,7 @@
           $p4_price_per_person = $specificRow['price_per_person'];
           $p4_description = $specificRow['description'];
           $p4_no_of_days = $specificRow['no_of_days'];
+          
         }
         
         else {
@@ -235,22 +256,22 @@
             <div class="price"><sup>$</sup><?php echo $p4_price_per_person ?></div>
             <ul class="unorder-safari-packages">
           
-            <li><?php echo $p4_name ?></li>
-            <li>$<?php echo $p4_price_per_person ?></li>
+           
             <li><?php echo $p4_description ?></li>
-            <li><?php echo $p4_no_of_days ?></li>
+            <li><?php echo $p4_no_of_days ?>night</li>
+            
 
             </ul>
-            <a href="#?pkg_id=<?php
-                $rowIndex =2;
+            <a href="Accomodation.php?pkg_id=<?php
+                $rowIndex =3;
                 if ($rowIndex < count($packages)) {
                   $specificRow = $packages[$rowIndex];
                   echo $specificRow['pkg_id'];}
-                  ?>" class="order-btn">Order Now</a>
+                  ?>" class="order-btn">PROCEED</a>
         </div>
 
         <?php
-        $rowIndex =5;
+        $rowIndex =4;
 
         if ($rowIndex < count($packages)) {
           $specificRow = $packages[$rowIndex];
@@ -273,18 +294,18 @@
             <div class="price"><sup>$</sup><?php echo $p5_price_per_person ?></div>
             <ul class="unorder-safari-packages">
             
-            <li><?php echo $p5_name ?></li>
-            <li>$<?php echo $p5_price_per_person ?></li>
-            <li><?php echo $p5_description ?></li>
-            <li><?php echo $p5_no_of_days ?></li>
+          
+            <li><?php echo $p5_description  ?></li>
+            <li><?php echo $p5_no_of_days ?> night</li>
+            
 
             </ul>
-            <a href="#?pkg_id=<?php
+            <a href="Accomodation.php?pkg_id=<?php
                 $rowIndex =4;
                 if ($rowIndex < count($packages)) {
                   $specificRow = $packages[$rowIndex];
                   echo $specificRow['pkg_id'];}
-                  ?>" class="order-btn">Order Now</a>
+                  ?>" class="order-btn">PROCEED</a>
         </div>
     
     </div>

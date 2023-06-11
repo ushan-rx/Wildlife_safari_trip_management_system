@@ -21,8 +21,9 @@ body{
 }
 
 /*All best deals card */
+
 .cards{
-    margin-top: 100px;
+    margin-top: 120px;
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -190,7 +191,6 @@ body{
     padding: 12px 30px;
     border-radius: 0 0 20px 20px;
     font-size: 20px;
-    text-transform : uppercase;
     font-weight: 600;
     transition: .4s linear;
 
@@ -199,7 +199,7 @@ body{
 /*pricing card hover color*/
 .pricing-card:hover .pricing-card-header{
 
-    box-shadow: 0 0 0 20em rgba(164, 221, 143, 0.414);
+    box-shadow: 0 0 0 16em rgba(164, 221, 143, 0.414);
     border-radius: 50px;
 }
 
