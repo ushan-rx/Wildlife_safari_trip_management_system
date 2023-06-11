@@ -42,23 +42,23 @@
         </div>
         <div class="inputbox">
           <label for="">First Name</label>
-          <input type="text" name="first_name">
+          <input type="text" name="first_name" required>
         </div>
         <div class="inputbox">
           <label for="">Last Name</label>
-          <input type="text" name="last_name">
+          <input type="text" name="last_name" required>
         </div>
         <div class="inputbox">
           <label for="">Phone</label>
-          <input type="tel" name="phone">
+          <input type="tel" name="phone" required>
         </div>
         <div class="inputbox">
           <label for="">E-Mail</label>
-          <input type="email" name="mail">
+          <input type="email" name="mail" required>
         </div>
         <div class="inputbox">
           <label for="">Country</label>
-          <input type="text" name="country">
+          <input type="text" name="country" required>
         </div>
 
         <h2>Select Payment Method</h2>
@@ -75,13 +75,13 @@
         </div>
 
         <div class="inputbox">
-          <input type="hidden" name="boxNumber" id="input_box">
+          <input type="hidden" name="boxNumber" id="input_box" required>
         </div>
         
         <div class="paym">
           <div class="payBox">
             <div class="amount">
-            <p class="USD">USD <?PHP echo $total_amount['total_price'] ?></p>
+            <p class="USD">$<?PHP echo $total_amount['total_price'] ?></p>
             </div>
             <div class="pay">
               <input type="submit" class="payButton"  name="submit" value="PAY">

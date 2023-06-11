@@ -5,10 +5,15 @@ require 'classes/generateId.php';
 
 $dbConnect = Database::getConnection();
 
-session_start();
+
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+
 
 // $package_ID = $_POST['pkg_id'];
-// $date = $_POST['date'];
+// $reserved_date = $_POST['date'];
 // $no_Of_People = $_POST['no_Of_People'];
 // $accommodation = $_POST['accommodation'];
 // $no_Of_Rooms = $_POST['no_Of_Rooms'];

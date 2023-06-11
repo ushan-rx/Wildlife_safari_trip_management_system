@@ -134,7 +134,7 @@
 
                   <tr class="receipt-amount">
                     <th class="receipt-amount-1" colspan="2">Amount : </th>
-                    <th>Rs.<?php echo $totalAmount; ?></th>
+                    <th>$<?php echo $totalAmount; ?></th>
                   </tr>
                           
                 </table>         
