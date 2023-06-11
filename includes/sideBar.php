@@ -28,11 +28,11 @@ if (empty($_SESSION['staff_ses'])) {
                 </span>
             </div>
             <div class="list-group list-group-flush my-3">
-                <a href="adminDashboard.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent  selected">
+                <a href="adminDashboard.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-gauge-high me-2"></i>Dashboard
                 </a>
-                <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
-                    <i class="fa-solid fa-comments me-2"></i>Feedback/Inquiry
+                <a href="inquiryDash.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
+                    <i class="fa-solid fa-comments me-2"></i>Inquiries
                 </a>
                 <a href="adminCancelReservation.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-table-list me-2"></i>Reservations
@@ -43,14 +43,12 @@ if (empty($_SESSION['staff_ses'])) {
                 <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-briefcase me-2"></i>Packages</a>
 
-                <a href="#" class=" text-danger list-group-item list-group-item-action bg-transparent fw-bold"><i
+                <a href="adminLogout.php" class=" text-danger list-group-item list-group-item-action bg-transparent fw-bold"><i
                         class="fas fa-power-off me-2"></i>Logout</a>
             </div>
         </div>
 
-
-        <?php
-
+<?php
     } else {
         header("Location: adminLogProcess.php");
         exit();

@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($password, $staff['pw'])) {
                 session_start();
                 $_SESSION["staff_ses"] = $staff["sid"];
-                $_SESSION["type"] = $staff["staff_type"];
                 header("Location: adminDashboard.php");
                 exit();
             } else {
