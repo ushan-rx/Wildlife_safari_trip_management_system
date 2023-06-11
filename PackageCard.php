@@ -159,7 +159,7 @@
 
         <div class="pricing-card">
             <h3 class="pricing-card-header"><?php echo $p2_name ?></h3>
-            <div class="price"><sup>$</sup><?php echo $$p2_price_per_person ?></div>
+            <div class="price"><sup>$</sup><?php echo $p2_price_per_person ?></div>
             <ul class="unorder-safari-packages">
 
             <li><?php echo $p2_name ?></li>
