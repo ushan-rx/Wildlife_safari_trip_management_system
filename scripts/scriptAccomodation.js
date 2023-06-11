@@ -46,7 +46,10 @@ for(var i=0; i<decrementButton.length;i++){
     })
 }
 
-/*up-down buttons and slides */
+/*up-down buttons and slides
+reference =https://www.youtube.com/watch?v=laNpbZISwjY&t=199s
+
+*/
 
 const sliderContainer =document.querySelector('.slider-container');
 const slideLeft =document.querySelector('.left-slide');
