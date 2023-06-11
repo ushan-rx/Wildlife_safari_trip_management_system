@@ -48,7 +48,7 @@
           </tr>
           <tr>
             <td>Accommodation</td>
-            <td><?php echo $accommodation?></td>
+            <td><?php echo $acc_name?></td>
           </tr>
           <tr>
             <td>No Of Rooms</td>
