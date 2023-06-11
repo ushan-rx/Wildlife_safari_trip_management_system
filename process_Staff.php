@@ -16,28 +16,8 @@ if (isset($_POST['submit1'])) {
     $sid = $_POST['sid'];
     $status= $_POST['status'];
 
-// $query1 = "INSERT INTO staff(sid, f_name, l_name, email,staff_type, status) VALUES ('$sid',''$f_name,'$l_name','$email','$staff_type','$status')";
-$conn = new mysqli('localhost', 'root','', 'safari_management_system');
-if($conn->connect_error){
-    die('Connection Failed : '.$conn->connect_error);
+$query1 = "INSERT INTO staff(sid, f_name, l_name, email,staff_type, status) VALUES ('$sid',''$f_name,'$l_name','$email','$staff_type','$status')";
 
-}else{
-
-
-   $stmt = $conn->prepare("INSERT INTO staff(sid, f_name, l_name, email,staff_type, status) values(?, ?, ?, ?, ?, ?)");
-   $stmt->bind_param($sid,$f_name,$l_name,$email,$staff_type,$status);
-   $stmt->execute();
-   echo "insertion successfully...";
-   $stmt->close();
-   $conn->close();
-
-//make inquiry_id
-   $query_get2="SELECT MAX(IN_ID) AS 'lastone' FORM staff";
-   $resultest2=Database::search($query_get2);
-   $lastid=$resultest2->fetch_assoc();
-   $sid=GenerateId::generate($lastid['lastone'], "IN");
-
-}
 
 }
 
@@ -66,7 +46,3 @@ $query3= "DELETE FROM staff ";
 }
 
 //update data
-if (isset($_POST['submit3'])) {
-
-    
-}
