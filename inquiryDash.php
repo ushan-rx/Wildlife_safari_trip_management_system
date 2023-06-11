@@ -30,19 +30,22 @@
 
       <!-- your code here -->
       <div class="row m-5 p-4">
-        <div class="col-sm-4">
-          <div class="list-group" id="list-group">
+        <div class="row text-center fs-3">Select inquiry to view</div>
+        <div class="col-sm-4 p-2 primary-bg list-field">
+          <div class="list-group overflow-auto" id="list-group">
             <!-- List items will be dynamically populated using AJAX -->
           </div>
         </div>
         <div class="col-sm-8 ">
           <div class="form-group secondary-bg p-2">
-            <label for="selected-item">Selected Item: <span id="selected-icon"></span></label>
+            <label for="selected-item">Inquiry Id: <span id="selected-item2"></span></label>
             <textarea class="form-control" id="selected-item" readonly></textarea>
+            <button class="btn btn-primary mt-4 bg-danger" id="submit-button">Delete</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
 
@@ -66,23 +69,29 @@
           $('#list-group').html(data);
         }
       });
-
-      // Update text field when a list item is clicked
-      $(document).on('click', '.list-group-item', function() {
+      // Update text field and selected item label when a list item is clicked
+      $(document).on('click', '.list-group-item', function () {
         var selectedItem = $(this).text().trim();
-        $('#selected-icon').text(selectedItem);
-        $('#selected-item').val(selectedItem);
-
-        // Send selected item to handleit.php for further processing
+        $('#selected-item2').text(selectedItem);
+        // Send selected item to inquiryProcess.php to retrieve text
         $.ajax({
           url: "inquiryProcess.php",
           method: "POST",
-          data: { action: "update_text_field", selectedItem: selectedItem },
+          data: { action: "update_text_field", selectedItem2: selectedItem },
           success: function (data) {
-            // Handle the response from handleit.php if needed
+            $('#selected-item').val(data);
           }
         });
       });
+    });
+
+    $(document).on('click', '#submit-button', function () {
+      var selectedItem2 = $('#selected-item2').text().trim();
+      // Send the selected item value to inquiryProcess.php to delete
+      var form = $('<form action="inquiryProcess.php" method="post"></form>');
+      form.append('<input type="hidden" name="selectedInquiry" value="' + selectedItem2 + '">');
+      $('body').append(form);
+      form.submit();
     });
   </script>
 

@@ -1,27 +1,42 @@
 <?php
-// Simulating a database query to get list items
-$listItems = array(
-  "Item 1",
-  "Item 2",
-  "Item 3",
-  "Item 4",
-  "Item 5"
-);
+require_once 'classes/connection.php';
+
+// display inquiry list
+$queryget1 = "SELECT inquiry_id FROM inquiry where status = 1";
+$results1 = Database::search($queryget1);
+$countr = 0;
+while ($row = $results1->fetch_assoc()) {
+  $listItems[$countr] = $row['inquiry_id'];
+  $countr++;
+}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  if ($_POST["action"] === "get_list_items") {
-    // Return the list items as HTML
-    foreach ($listItems as $item) {
-      echo '<a href="#" class="list-group-item list-group-item-action">' . $item . '</a>';
-    }
-  } elseif ($_POST["action"] === "update_text_field") {
-    // Process the selected item and send a response if needed
-    $selectedItem = $_POST["selectedItem"];
-    // Perform any necessary operations with the selected item
-    // ...
 
-    // Send a response if needed
-    echo "Selected item: " . $selectedItem;
+  if (isset($_POST["action"])) {
+    if ($_POST["action"] === "get_list_items") {
+      // Return the list items
+      foreach ($listItems as $item) {
+        echo '<a href="#" class="list-group-item list-group-item-action">' . $item . '</a>';
+      }
+    } elseif ($_POST["action"] === "update_text_field") {
+      // Process the inquiry text and send to text field
+      $selectedItem2 = htmlspecialchars($_POST["selectedItem2"]);
+      $querysearch = "SELECT `inquiry_txt` FROM `inquiry` WHERE inquiry_id = '$selectedItem2'";
+      $resulttxt = Database::search($querysearch);
+      if ($resulttxt) {
+        $txtarray = $resulttxt->fetch_assoc();
+        echo $txtarray['inquiry_txt'];
+      } else {
+        echo "<p class='lead'>Unable to display</p>";
+      }
+    }
+  }
+
+  if (isset($_POST["selectedInquiry"])) {
+    $inquiry = htmlspecialchars($_POST["selectedInquiry"]);
+    $querydel = "UPDATE inquiry SET status= 0 WHERE inquiry_id = '$inquiry'";
+    if (Database::iud($querydel)) {
+      header("Location: inquiryDash.php");
+    }
   }
 }
-?>
