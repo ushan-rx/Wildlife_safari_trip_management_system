@@ -6,9 +6,9 @@
         </a>
         <ul id="nav-links">
             <li><a href="index.php" class="links">Home</a></li>
-            <li><a href="" class="links">Packages</a></li>
+            <li><a href="PackageCard.php" class="links">Packages</a></li>
             <li><a href="safari.php" class="links">Destinations</a></li>
-            <li><a href="" class="links">Testimonials</a></li>
+            <li><a href="Testimonial.php" class="links">Testimonials</a></li>
             <li><a href="contact.php" class="links">Contact Us</a></li>
         </ul>
         <div class="nav-buttons">
