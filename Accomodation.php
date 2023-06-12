@@ -20,11 +20,10 @@
 </head>
 
 <body>
-   
+
   <?php require "includes/header.php";
-  require_once 'classes/connection.php';
-  $pkg_id = '';
-  if ($_SERVER["REQUEST_METHOD"] == "GET") {
+
+  if ($_SERVER["REQUEST_METHOD"] === "GET") {
     if (isset($_GET['pkg_id'])) {
       $pkg_id = $_GET['pkg_id'];
     } else {
@@ -37,7 +36,7 @@
   <main>
     <?php
     $queryGetDate = "SELECT start_date FROM package WHERE pkg_id = '$pkg_id'";
-    
+
     $resultset = Database::search($queryGetDate);
     if ($resultset) {
       $row = $resultset->fetch_assoc();
