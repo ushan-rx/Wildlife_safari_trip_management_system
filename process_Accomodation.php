@@ -1,7 +1,7 @@
 <?php
 
-require_once 'classes/connection.php';
-
+require 'classes/connection.php';
+require 'classes/generateId.php';
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
@@ -19,9 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $result = Database::search($query1);
             ?>
             <form action="process_comformPaymentDetails.php" method="post">
-            
                 <div class="left-slide">
-
                     <?php while ($row = $result->fetch_assoc()) {
 
                         $rating = $row['rating'];
@@ -51,8 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <h3>
                                 <?php echo $row['price'] . "$"; ?>
                             </h3>
-                            <input type="hidden" name="accommodation" value="<?php echo   $row['aid']; ?>">
-                          
+                            <input type="hidden" name="accommodation" value="<?php echo $row['aid']; ?>">
                             <input type="submit" name="submit" value="RESERVE" class="button-reserve">
                         </div>
                     <?php } ?>
@@ -76,8 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         ?>
                         <div style="background-image: url(<?php echo $imageUrl ?>);"></div>
                         <?php
-                        
-    
                     }
                 }
                 ?>
