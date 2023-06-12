@@ -10,12 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (isset($_POST['delete'])) {
 
-        $f_name= $_POST['f_name'];
-        $l_name = $_POST['l_name'];
+        $sid = $_POST['sid'];
+        $f_name= $_POST['fname'];
+        $l_name = $_POST['lname'];
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
-        $sid = $_POST['sid'];
-        $status= $_POST['status'];
 
         if (!empty($sid)) {
             $dlt_sql = "UPDATE staff SET status = 0 WHERE 'sid'  = '$sid'";
@@ -28,28 +27,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "<script>window.location.href = 'staff.php';</script>";
                 exit();
             }
-            
         } else {
-            echo "<script> alert('Please fill in all the required fields.'); </script>";
+            echo "<script> alert('Please fill the staff id.'); </script>";
             echo "<script> window.location.href = 'staff.php'; </script>";
             exit();
         }
 
     } elseif (isset($_POST['update'])) {
 
+        $sid = $_POST['sid'];
         $f_name= $_POST['f_name'];
         $l_name = $_POST['l_name'];
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
-        $sid = $_POST['sid'];
-        $status= $_POST['status'];
     
         if (!empty($f_name) && !empty($l_name) && !empty($email) && !empty($pwd) && !empty($sid)) {
     
             $upd_sql = "UPDATE staff SET status = 1, f_name = $f_name, l_name = $l_name, email = $email, pwd = $pwd,  WHERE sid  = $sid ";
                 if(Database::iud($upd_sql)){
                 echo "<script>alert('Update success');</script>";
-                echo "<script>window.location.href = staff.php';</script>";
+                echo "<script>window.location.href = 'staff.php';</script>";
                 exit();
             } else {
                 echo "<script>alert('Update failed.');</script>";
@@ -58,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
     
         } else {
-            echo "<script> alert('Please fill in all the required fields.'); </script>";
+            echo "<script> alert('Please fill all the required fields.'); </script>";
             echo "<script> window.location.href = 'staff.php'; </script>";
             exit();
         }
@@ -69,14 +66,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $l_name = $_POST['l_name'];
         $email = $_POST['email'];
         $pwd = $_POST['pwd'];
-        $sid = $_POST['sid'];
-        $status= $_POST['status'];
 
-
-        if (!empty($f_name) && !empty($l_name) && !empty($email) && !empty($pwd) && !empty($sid)) {
-            
-
-
+        if (!empty($f_name) && !empty($l_name) && !empty($email) && !empty($pwd)) {
+            $qget = "SELECT MAX(sid) AS 'lastone' FROM staff";
+            $result = Database::search($qget);
+            if($result){
+                $row = $result->fetch_assoc();
+                $prev = $row['lastone'];
+                $sid = GenerateId::generate($prev, "ST");
+                $insrt_sql = "INSERT INTO staff (sid, f_name, l_name, email, pwd) VALUES('$f_name', ' $l_name', '$email', '$pwd', '$sid')";
+                if(Database::iud($insrt_sql)){
+                    echo "<script> alert('Insert successful.'); </script>";
+                    echo "<script> window.location.href = 'staff.php'; </script>";
+                }
+            }
         } else {
             echo "<script> alert('Please fill in all the required fields.'); </script>";
             echo "<script> window.location.href = 'staff.php'; </script>";

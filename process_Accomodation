@@ -15,13 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         if (!empty($price) and !empty($date) and !empty($guests) and !empty($rooms) and !empty($pkg_id)) {
 
-            $query1 = "SELECT * FROM accommodation WHERE accommodation.price <= '$price'  AND Pkg_id ='$pkg_id' AND accommodation.aid NOT IN (SELECT a.aid FROM accommodation a JOIN room_record r WHERE a.aid = r.aid AND r.room_count < '$rooms' AND r.date = '$date')";
+            $query1 = "SELECT * FROM accommodation WHERE accommodation.price <= '$price'  AND pkg_id ='$pkg_id' AND accommodation.aid NOT IN (SELECT a.aid FROM accommodation a JOIN room_record r WHERE a.aid = r.aid AND r.room_count < '$rooms' AND r.date = '$date')";
             $result = Database::search($query1);
             ?>
-            <!-- <form action="process_comformPaymentDetails.php" method="post"> -->
-            <form action="test.php" method="post">
+            <form action="process_comformPaymentDetails.php" method="post">
                 <div class="left-slide">
-
                     <?php while ($row = $result->fetch_assoc()) {
 
                         $rating = $row['rating'];
@@ -51,8 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <h3>
                                 <?php echo $row['price'] . "$"; ?>
                             </h3>
-                            <input type="hidden" name="accommodation" value="<?php echo "21341xxxx" ?>">
-                            <!-- $row['aid']; -->
+                            <input type="hidden" name="accommodation" value="<?php echo $row['aid']; ?>">
                             <input type="submit" name="submit" value="RESERVE" class="button-reserve">
                         </div>
                     <?php } ?>
@@ -65,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
             <?php
-            $query2 = "SELECT accommodation.image FROM accommodation WHERE accommodation.price <= '$price' AND Pkg_id ='$pkg_id' AND accommodation.aid NOT IN (SELECT a.aid FROM accommodation a JOIN room_record r WHERE a.aid = r.aid AND r.room_count < '$rooms' AND r.date = '$date')";
+            $query2 = "SELECT accommodation.image FROM accommodation WHERE accommodation.price <= '$price' AND pkg_id ='$pkg_id' AND accommodation.aid NOT IN (SELECT a.aid FROM accommodation a JOIN room_record r WHERE a.aid = r.aid AND r.room_count < '$rooms' AND r.date = '$date')";
             $result2 = Database::search($query2);
             ?>
             <div class="right-slide">
@@ -76,22 +73,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         ?>
                         <div style="background-image: url(<?php echo $imageUrl ?>);"></div>
                         <?php
-                        // <div style="background-image: url(images/hotels/h15.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h2.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h3.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h13.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h4.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h6.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h7.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h8.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h9.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h10.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h12.jpeg);"></div>
-                        // <div style="background-image: url(images/hotels/h5.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h11.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h14.jpg);"></div>
-                        // <div style="background-image: url(images/hotels/h1.webp);"></div>
-    
                     }
                 }
                 ?>

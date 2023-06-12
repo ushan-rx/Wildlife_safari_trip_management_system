@@ -25,11 +25,10 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-right-arrow-left primary-txt fs-3 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0 navbar-txt">Dashboard</h2>
+                    <h2 class="fs-2 m-0 navbar-txt">Staff Management</h2>
                 </div>
             </nav>
 
-            <!-- your code here -->
             <div class="row g-5 my-5">
                 <div class="col">
                
@@ -60,7 +59,7 @@
 
                             <div class="input-box">
                                 <label>Staff ID</lable>
-                                <input type="text"  name="name">
+                                <input type="text"  name="sid">
                                 
                             </div>
 
