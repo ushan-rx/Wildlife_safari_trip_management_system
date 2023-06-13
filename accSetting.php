@@ -12,22 +12,21 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/account.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleAcc.css'>
 
 </head>
 
 <body>
     
 <?php 
-require 'includes/header.php' ?>
+    require 'includes/header.php' ?>
 <?php require_once('classes/connection.php') ?>
 
   <?php
-    require_once('classes/connection.php');
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET"){
-      // Get the job ID from the URL
-     $id = $_GET['id'];
+    if (!empty($_SESSION['user_ses'])){
+
+      $id = $_SESSION['user_ses'];
 
       $query = "SELECT * FROM  user WHERE uid = ?";
       $stmt = Database::getConnection()->prepare($query);
@@ -48,16 +47,7 @@ require 'includes/header.php' ?>
         // Close the statement
         $stmt->close();
 ?> 
-
-<?php 
-}else{
-     header("Location: index.php");
-     exit();
-}
- ?>
-      
-
-    
+  
   <!-- your code here -->
   <section class="account1">
         <div class="container1">
@@ -124,12 +114,7 @@ require 'includes/header.php' ?>
                         
                           </div>
                         </div>
-                </form>
-                
-
-       
-
-                
+                </form>       
             </div>
         </div>
     </section>
@@ -148,7 +133,12 @@ require 'includes/header.php' ?>
   
 ?>
 
-  
+<?php 
+}else{
+     header("Location: index.php");
+     exit();
+}
+ ?>
 
   <?php include 'includes/footer.php' ?>
   

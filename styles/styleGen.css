@@ -154,6 +154,11 @@ svg {
   font-weight: var(--fw-semibold);
 }
 
+.b-txt{
+  font-size: var(--fs-h4);
+  color: var(--clr-default-txt);
+}
+
 h4 {
   font-size: var(--fs-h4);
 }
@@ -178,6 +183,10 @@ button {
   color: var(--clr-white-600);
   font-size: var(--fs-button);
   font-weight: var(--fw-semibold);
+}
+
+.button-default a{
+  color: var(--clr-white-600);
 }
 
 .button-default:hover {

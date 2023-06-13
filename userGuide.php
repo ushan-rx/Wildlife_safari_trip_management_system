@@ -52,8 +52,8 @@
       </div>
       <div class="hero-image">
         <div class="images">
-          <img src="images\3.png" class="m1" alt="img1"><br>
-          <img src="images\7.png" class="m3" alt="img3"> 
+          <img src="images/site_images/safai_jeep1.jpeg" class="m1" alt="img1"><br>
+          <!-- <img src="images/7.png" class="m3" alt="img3">  -->
         </div>
         
     </div>
