@@ -105,7 +105,7 @@
      </div>
        
         
-        <a href="#" class="button-book">Book Now</a>
+        <a href="PackageCard.php" class="button-book">Book Now</a>
      </div>
      <!--end of first card-->
  
@@ -163,7 +163,7 @@
  
      </div>
  
-        <a href="#" class="button-book">Book Now</a>
+        <a href="PackageCard.php" class="button-book">Book Now</a>
      </div>
  
      <!--end of second card-->
@@ -222,7 +222,7 @@
      </div>
  
         
-        <a href="#" class="button-book">Book Now</a>
+        <a href="PackageCard.php" class="button-book">Book Now</a>
      </div>
      <!--end of third card-->
  
@@ -281,7 +281,7 @@
      </div>
  
      
-        <a href="#" class="button-book">Book Now</a>
+        <a href="PackageCard.php" class="button-book">Book Now</a>
      </div>
       <!--end of fourth card-->
  
@@ -340,7 +340,7 @@
  
      </div>
  
-        <a href="#" class="button-book">Book Now</a>
+        <a href="PackageCard.php" class="button-book">Book Now</a>
      </div>
       <!--end of fiftth card-->
  
