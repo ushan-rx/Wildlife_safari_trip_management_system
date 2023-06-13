@@ -67,38 +67,35 @@
           <div class="box-card pkg-card">
             <h3 class="heading">Couple Blast</h3>
             <ul class="package-details">
-              <li>Destination</li>
-              <li>No of people</li>
-              <li>Accomodation</li>
-              <li>No of rooms</li>
-              <li>Starting date</li>
-              <li>End date</li>
+              <li>Yala</li>
+              <li>2 people</li>
+              <li>King's Villa resort</li>
+              <li>1 Double room</li>
+              <li>12th May</li>
             </ul>
-            <h4>100$</h4>
+            <h4>80$</h4>
           </div>
           <div class="box-card pkg-card">
             <h3 class="heading">Best for solo travelers</h3>
             <ul class="package-details">
-              <li>Destination</li>
-              <li>No of people</li>
-              <li>Accomodation</li>
-              <li>No of rooms</li>
-              <li>Starting date</li>
-              <li>End date</li>
+              <li>Kanneliya</li>
+              <li>1 person</li>
+              <li>Green Hut hotel</li>
+              <li>1 single room</li>
+              <li>16th May</li>
             </ul>
-            <h4>100$</h4>
+            <h4>50$</h4>
           </div>
           <div class="box-card pkg-card">
             <h3 class="heading">Family Offer</h3>
             <ul class="package-details">
-              <li>Destination</li>
-              <li>No of people</li>
-              <li>Accomodation</li>
-              <li>No of rooms</li>
-              <li>Starting date</li>
-              <li>End date</li>
+              <li>Minneriya</li>
+              <li>5 people</li>
+              <li>Green Villa hotel</li>
+              <li>3 rooms</li>
+              <li>20th May</li>
             </ul>
-            <h4>100$</h4>
+            <h4>200$</h4>
           </div>
         </div>
         <button class="button-default">More</button>
@@ -201,24 +198,21 @@ the heart of safari destinations.Immerse yourself in the sounds of nature, indul
               <input id="question-1" type="checkbox" name="show-hide">
               <label for="question-1">How to do reservation?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
-                  obcaecati ab natus quod animi harum.</p>
+                <p>Go to 'Packages' and select one of them ,then you will be directed to reservations.</p>
               </div>
             </div>
             <div class="question-tab">
               <input id="question-2" type="checkbox" name="show-hide">
               <label for="question-2">How to cancel reservation?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
-                  obcaecati ab natus quod animi harum.</p>
+                <p>If you want to cancel the reservation inform us via 'Contact Us page'.</p>
               </div>
             </div>
             <div class="question-tab">
               <input id="question-3" type="checkbox" name="show-hide">
               <label for="question-3">Reservation cancellation period?</label>
               <div class="answer-tab">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sequi eveniet, exercitationem
-                  obcaecati ab natus quod animi harum.</p>
+                <p>Reservation cancellation period is 7 days.</p>
               </div>
             </div>
           </div>

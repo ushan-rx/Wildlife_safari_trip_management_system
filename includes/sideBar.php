@@ -37,10 +37,10 @@ if (empty($_SESSION['staff_ses'])) {
                 <a href="adminCancelReservation.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-table-list me-2"></i>Reservations
                 </a>
-                <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
+                <a href="staff.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-user-gear me-2"></i>Accounts
                 </a>
-                <a href="#" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
+                <a href="dashPackage.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-briefcase me-2"></i>Packages</a>
 
                 <a href="adminLogout.php" class=" text-danger list-group-item list-group-item-action bg-transparent fw-bold"><i
