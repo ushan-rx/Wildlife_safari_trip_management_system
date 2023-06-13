@@ -13,7 +13,7 @@
     rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/wildContact.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleContact.css'>
 
 </head>
 
@@ -28,8 +28,8 @@
   <section class="contact">
     <div class="bground"></div>
     <div class="content">
-        <h1>Contact Us</h1>
-        <p>Submit a trip request to connect with one of our best safari experts
+        <h1 class="heading">Contact Us</h1>
+        <p class= "b-txt">Submit a trip request to connect with one of our best safari experts
             and receive the full range of informations and inspirations. 
            You will plan everything with the assistance of our Mstersafari expert.</p>
     </div>
@@ -39,7 +39,7 @@
               <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Headqarters</h3>
-                    <p>Colombo,Sri Lanka<br> L-2 90 Seylan Towers<br>Galle Road</p>    
+                    <p calss = "b-txt">Colombo,Sri Lanka<br> L-2 90 Seylan Towers<br>Galle Road</p>    
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                 <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Talk to us</h3>
-                    <p>Chat with our team to discover
+                    <p calss = "b-txt">Chat with our team to discover
                         how our service useful to you.</p>
                     <p>Hotline - +919876432</p>    
                 </div>
@@ -57,7 +57,7 @@
                 <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Email</h3>
-                    <p>mastersafari@gmail.com</p>    
+                    <p calss = "b-txt">mastersafari@gmail.com</p>    
                 </div>
             </div>
             <br><br>
@@ -120,8 +120,8 @@
 
   <!-- to here -->
  <?php include 'includes/footer.php'?>
-  
-  <script src='script.js'></script>
+ <script src='scripts/scriptTestimonial.js'></script> 
+ <script src='scripts/scriptGen.js'></script>
 </body>
 
 </html>

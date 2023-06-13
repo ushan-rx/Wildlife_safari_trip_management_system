@@ -12,20 +12,22 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleAcc.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/dummy.css'>
 
 
 </head>
 
 <body>
-    <?php require 'classes/connection.php' ?>
+    <?php require_once 'classes/connection.php' ?>
 
     <?php require 'includes/header.php' ?>
     <?php
 
-    $query = "SELECT * FROM user WHERE uid = '$_SESSION[user_ses]'";
+    $query = "SELECT * FROM user";
     $result = mysqli_query(Database::getConnection(), $query);
 
+    $query1 = "SELECT count(*) FROM user";
+    $job_list = mysqli_query(Database::getConnection(),$query1);
     ?>
 
     <section class="account1">
@@ -51,7 +53,7 @@
                 
                 echo "<h3 class='job-title'>$First_Name </h3>";
                 echo "<div class='job-btn'>";
-                echo "<a href='./accSetting.php?id=$id' class='j-edit'> Update </a>";
+                echo "<a href='./account.php?id=$id' class='j-edit'> Update </a>";
                 
               
                 echo "</div>";
@@ -67,18 +69,22 @@
                 echo "</div>";
             }
         } else {
+            // No user data found
             echo "<p>No user details founded.</p>";
         }
 
+        // Free result set
         mysqli_free_result($result);
 
+        // Close the connection
+                // mysqli_close(Database::getConnection());
         ?>
         </div>
     </section>
 
     <?php include 'includes/footer.php'?>
 
-    <script src='script.js'></script>
+    <script src='scripts/scriptGen.js'></script>
 
     
 

@@ -43,7 +43,7 @@
       <div class="left-col">
         <h1 class="secondary-header">PACKAGES</h1>
         <p>Experience the thrill of Sri Lanka's untamed wilderness with our carefully curated safari packages. Encounter majestic wildlife, witness stunning landscapes, and create lifelong memories in the heart of nature. Choose from a range of luxury itineraries designed to provide an unforgettable safari adventure tailored to your preferences.</p>
-        <button class="button-default"> View Packages</button>
+        <button class="button-default"> <a href="PackageCard.php">View Packages</a></button>
       </div>
       <div class="right-col">
         <div class="img-wrapper">
@@ -65,9 +65,11 @@
 
         <div class="box-wrapper">
           <div class="box-card pkg-card">
-            <h3 class="heading">Couple Blast</h3>
+            <div class= "sale">
+              <h3 class="heading">Couple Blast</h3>
+              </div>
             <ul class="package-details">
-              <li>Yala</li>
+              <li>Yala National Park</li>
               <li>2 people</li>
               <li>King's Villa resort</li>
               <li>1 Double room</li>
@@ -76,9 +78,11 @@
             <h4>80$</h4>
           </div>
           <div class="box-card pkg-card">
-            <h3 class="heading">Best for solo travelers</h3>
+            <div class= "sale">
+              <h3 class="heading">Best for solo travelers</h3>
+            </div>
             <ul class="package-details">
-              <li>Kanneliya</li>
+              <li>Kanneliya National Park</li>
               <li>1 person</li>
               <li>Green Hut hotel</li>
               <li>1 single room</li>
@@ -87,9 +91,11 @@
             <h4>50$</h4>
           </div>
           <div class="box-card pkg-card">
-            <h3 class="heading">Family Offer</h3>
+            <div class= "sale">
+              <h3 class="heading">Family Offer</h3>
+            </div>
             <ul class="package-details">
-              <li>Minneriya</li>
+              <li>Minneriya National Park</li>
               <li>5 people</li>
               <li>Green Villa hotel</li>
               <li>3 rooms</li>
@@ -98,7 +104,7 @@
             <h4>200$</h4>
           </div>
         </div>
-        <button class="button-default">More</button>
+        <button class="button-default"><a href="PackageCard.php">More</a></button>
 
       </div>
     </section>
@@ -184,7 +190,7 @@ the heart of safari destinations.Immerse yourself in the sounds of nature, indul
             <h4>Karl Max</h4>
           </div>
         </div>
-        <button class="button-default">More</button>
+        <button class="button-default"><a href="Testimonial.php">more</a></button>
       </div>
     </section>
     <hr class="section-end">
