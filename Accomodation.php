@@ -21,43 +21,44 @@
 
 <body>
 
-  <?php 
-  session_start();
-  if (!empty($_SESSION['user_ses'])) {
-    require "includes/header.php";
-    
+  <?php
+  // if (!empty($_SESSION['user_ses'])) {
+  require_once 'classes/connection.php';
+  require "includes/header.php";
+
+  ?>
+
+  <main>
+    <?php
+
     if ($_SERVER["REQUEST_METHOD"] === "GET") {
       if (isset($_GET['pkg_id'])) {
         $pkg_id = $_GET['pkg_id'];
+
+        $queryGetDate = "SELECT start_date as 'start_date' FROM package  WHERE pkg_id = '$pkg_id'";
+        $resultset = Database::search($queryGetDate);
+        if ($resultset) {
+          $row = $resultset->fetch_assoc();
+          $getDate = $row['start_date'];
+        }
       } else {
         header("Location:PackageCard.php");
       }
-    }
 
     ?>
-
-    <main>
-      <?php
-      $queryGetDate = "SELECT start_date FROM package WHERE pkg_id = '$pkg_id'";
-      $resultset = Database::search($queryGetDate);
-      if ($resultset) {
-        $row = $resultset->fetch_assoc();
-        $getDate = $row['start_date'];
-      }
-      ?>
       <form action="Accomodation.php" method="post">
         <div class="options-wrapper">
           <div class="container">
-            <input type="hidden" value="<?php $pkg_id ?>" name="pkg_id">
             <div class="component-box">
               <h5>Price/Night</h5>
               <input type="range" min="0" max="100" value="0" class="slider" id="Range" name="price">
               <p1>Value: <span id="demo"></span></p1>
             </div>
 
+            <input type="hidden" value="<?php echo $pkg_id; ?>" name="pkg_id">
             <div class="component-box">
               <h5>Check in</h5>
-              <input type="date" step="7" value="<?php echo (isset($getDate)) ? $getDate : "2023-06-03"; ?>" name="date">
+              <input type="date" step="7" value="<?php echo $getDate; ?>" name="date">
             </div>
             <div class="component-box">
               <h5>No of Guests</h5>
@@ -86,24 +87,32 @@
       </form>
 
       <div class="hotels-wrapper">
-
         <div class="slider-container">
-    <?php require 'process_Accomodation.php';
 
-  } else {
-    header("Location:signInUp.php");
-  }
-  ?>
+        </div>
       </div>
 
+    <?php
+      }
+      if($_SERVER["REQUEST_METHOD"] === "POST"){
+      require 'process_Accomodation.php';
 
-    </div>
+      }
+    ?>
 
 
-    <?php include "includes/footer.php" ?>
+  </main>
 
-    <script src='scripts/scriptGen.js'></script>
-    <script src='scripts/scriptAccomodation.js'></script>
+  <?php include "includes/footer.php" ?>
+
+  <script src='scripts/scriptGen.js'></script>
+  <script src='scripts/scriptAccomodation.js'></script>
+
+  <?php
+  //  } else {
+  //         header("Location:signInUp.php");
+  //       }
+  ?>
 
 </body>
 
