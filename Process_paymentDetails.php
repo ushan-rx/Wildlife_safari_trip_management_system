@@ -3,13 +3,24 @@
 require 'classes/connection.php';
 require 'classes/generateId.php';
 
-session_start();
-$rid = $_SESSION['reservation_id'];
+// Check if session is already started
+if(!isset($_SESSION)){
+    SESSION_START();
+}
+
+if(isset($_SESSION['user_ses'])){
+    $rid = $_SESSION['reservation_id'];
+} else {
+    header('Location: signInUp.php');
+    exit();
+}
+
+
+
 $dbConnect = Database::getConnection();
 
 
-//for show the  total amount
-
+//for get the  total amount
     $amount_sql = "SELECT total_price  FROM reservation WHERE reservation_id = '$rid'";
     $resultAmount = Database::search($amount_sql);
     $total_amount = $resultAmount->fetch_assoc();
@@ -35,13 +46,15 @@ if(isset($_POST['submit'])) {
     $mail = $_POST['mail'];
     $country = $_POST['country'];
 
-    $boxNumber = $_POST['boxNumber'];
+    $boxNumber =  intval($_POST['boxNumber']);
+
+    
     
     $date = date('Y-m-d H:i:s');
 
-    if($boxNumber=1){
+    if($boxNumber ==  1){
         $payMethod = "Visa and Master";
-    }elseif($boxNumber=2){
+    }elseif($boxNumber == 2){
         $payMethod = "Amarican Express";
     }
 

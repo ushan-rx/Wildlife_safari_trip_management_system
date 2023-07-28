@@ -7,12 +7,22 @@ require 'classes/generateId.php';
 
 $dbConnect = Database::getConnection();
 
+if(!isset($_SESSION)){
+    SESSION_START();
+}
 
+if(isset($_SESSION['reservation_id'])){
+    $userID = $_SESSION['user_ses'];
+    $reservationId = $_SESSION['reservation_id'];
+} else {
+    header('Location: signInUp.php');
+    exit();
+}
 // $userid = $_SESSION['userid'];
 
-$user_id = "user123";
+// $user_id = "user123";
 
-$reservationId = $_SESSION['reservation_id'];
+
 
 $add_sql = "SELECT payment.pay_id, payment.date, payment.payMethod, reservation.reserved_date, package.no_of_days, reservation.total_price, package.p_name
             FROM reservation
@@ -22,7 +32,7 @@ $add_sql = "SELECT payment.pay_id, payment.date, payment.payMethod, reservation.
 
 $stmt = $dbConnect->stmt_init();
 $stmt = $dbConnect->prepare($add_sql);
-$stmt->bind_param('s', $reservationId);
+$stmt->bind_param('s', $reservationId); 
 
 if ($stmt->execute()) {
     //  die("successfully.");

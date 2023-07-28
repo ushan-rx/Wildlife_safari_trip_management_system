@@ -8,7 +8,6 @@
 }
 
 .hotels-wrapper{
-
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -133,10 +132,19 @@ input[type="date"]{
 
 }
 .guest-wrapper input{
-
   width: 70px;
   text-align: center;
   background: var(--clr-green-500);
+  
+}
+/* to remove arrows in input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 input[type=submit] {

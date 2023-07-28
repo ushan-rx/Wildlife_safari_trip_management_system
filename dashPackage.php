@@ -25,18 +25,19 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
                     <i class="fa-solid fa-arrow-right-arrow-left primary-txt fs-3 me-3" id="menu-toggle"></i>
-                    <h2 class="fs-2 m-0 navbar-txt">Dashboard</h2>
+                    <h2 class="fs-2 m-0 navbar-txt">Package</h2>
                 </div>
             </nav>
 
             <!-- your code here -->
-            <div class="row g-5 my-5">
+            <div class="row g-5">
                 <div class="col">
                
-                <section class="container">
+                <section class="container text-center">
                 <?php require 'process_DashPackage.php'; ?> 
 
-                <header>Package Details <header> 
+                <header >Package Details </header> 
+
                 <form action = "process_DashPackage.php" method="post">
                     
                         <div class="form">
@@ -81,9 +82,9 @@
                                     </select>
                             </div>
                             </div>
-                               <input type="submit" name="insert"    value="Insert"> 
-                               <input type="submit" name="delete"    value="Delete">
-                               <input type="submit" name="update"    value="Update"> 
+                               <input type="submit" name="insert" value="Insert"> 
+                               <input type="submit" name="delete" value="Delete">
+                               <input type="submit" name="update" value="Update"> 
                             
                         </div>      
                    </form>

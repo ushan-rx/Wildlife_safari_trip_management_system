@@ -22,7 +22,39 @@
 <body>
 
   <?PHP include 'includes/header.php'; ?>
-  <?PHP include 'Process_paymentDetails.php'; ?> 
+  <?PHP 
+  
+  require 'classes/connection.php';
+  $dbConnect = Database::getConnection();
+
+
+  // Check if session is already started
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+if(isset($_SESSION['reservation_id'])){
+
+    $rid = $_SESSION['reservation_id'];
+
+  }else{
+    header('Location: signInUp.php');
+    exit();
+  }
+
+
+
+
+
+
+
+//for show the  total amount
+
+    $amount_sql = "SELECT total_price  FROM reservation WHERE reservation_id = '$rid'";
+    $resultAmount = Database::search($amount_sql);
+    $total_amount = $resultAmount->fetch_assoc();
+
+  ?> 
 
 
   <section id="payment">

@@ -22,10 +22,10 @@
 <body>
 
   <?php
-  // if (!empty($_SESSION['user_ses'])) {
   require_once 'classes/connection.php';
   require "includes/header.php";
 
+  if (!empty($_SESSION['user_ses'])) {  //handle registered user
   ?>
 
   <main>
@@ -35,14 +35,15 @@
       if (isset($_GET['pkg_id'])) {
         $pkg_id = $_GET['pkg_id'];
 
-        $queryGetDate = "SELECT start_date as 'start_date' FROM package  WHERE pkg_id = '$pkg_id'";
+        $queryGetDate = "SELECT start_date as 'start_date' FROM package  WHERE pkg_id = '$pkg_id'"; //get start day from database
         $resultset = Database::search($queryGetDate);
         if ($resultset) {
           $row = $resultset->fetch_assoc();
           $getDate = $row['start_date'];
         }
       } else {
-        header("Location:PackageCard.php");
+        header("Location: PackageCard.php");
+        exit();
       }
 
     ?>
@@ -51,11 +52,12 @@
           <div class="container">
             <div class="component-box">
               <h5>Price/Night</h5>
-              <input type="range" min="0" max="100" value="0" class="slider" id="Range" name="price">
+              <input type="range" min="0" max="100" value="1" class="slider" id="Range" name="price">
               <p1>Value: <span id="demo"></span></p1>
             </div>
 
             <input type="hidden" value="<?php echo $pkg_id; ?>" name="pkg_id">
+
             <div class="component-box">
               <h5>Check in</h5>
               <input type="date" step="7" value="<?php echo $getDate; ?>" name="date">
@@ -64,7 +66,7 @@
               <h5>No of Guests</h5>
               <div class="guest-wrapper">
                 <div class="dec button">-</div>
-                <input type="text" name="guests" id="1" value="0" class="input-field">
+                <input type="number" name="guests" id="1" value="0" class="input-field">
                 <div class="inc button">+</div>
               </div>
             </div>
@@ -73,7 +75,7 @@
               <h5>No of Rooms</h5>
               <div class="guest-wrapper">
                 <div class="dec button">-</div>
-                <input type="text" name="rooms" id="2" value="0" class="input-field">
+                <input type="number" name="rooms" id="2" value="0" class="input-field">
                 <div class="inc button">+</div>
               </div>
             </div>
@@ -109,14 +111,11 @@
   <script src='scripts/scriptAccomodation.js'></script>
 
   <?php
-  //  } else {
-  //         header("Location:signInUp.php");
-  //       }
+   } else {
+          header("Location:signInUp.php");
+        }
   ?>
 
 </body>
-
-
-
 
 </html>

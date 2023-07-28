@@ -250,6 +250,11 @@
   list-style-type: none;
 }
 
+.pkg-card{
+  outline: solid 2px var(--clr-green-400);
+outline-offset: -12px;
+}
+
 .pkg-card h3,
 h4 {
   margin-top: 8%;
@@ -267,14 +272,14 @@ h4 {
 
 .sale{
   margin-top: 1em;
-  filter: drop-shadow(0 0 0.5em rgb(255, 0, 0));
+  filter: drop-shadow(0 0 0.5em rgba(106, 255, 188, 0.704));
 }
 
 /* services */
 
 .mini-icon {
   width: 20%;
-  margin-top: 0.5em;
+  margin-top: 2em;
   border-radius: 0.5em
 }
 

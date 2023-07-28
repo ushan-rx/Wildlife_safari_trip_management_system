@@ -241,6 +241,10 @@ button:hover{
    
 }
 
+input[type="email"]{
+    text-transform: lowercase;
+}
+
 .testimonials{
     width: 73%;
     display: flex;

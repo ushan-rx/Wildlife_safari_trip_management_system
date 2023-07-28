@@ -21,11 +21,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } elseif ($_POST["action"] === "update_text_field") {
       // Process the inquiry text and send to text field
       $selectedItem2 = htmlspecialchars($_POST["selectedItem2"]);
-      $querysearch = "SELECT `inquiry_txt` FROM `inquiry` WHERE inquiry_id = '$selectedItem2'";
+      $querysearch = "SELECT * FROM inquiry WHERE inquiry_id = '$selectedItem2'";
       $resulttxt = Database::search($querysearch);
       if ($resulttxt) {
         $txtarray = $resulttxt->fetch_assoc();
-        echo $txtarray['inquiry_txt'];
+        echo "<h6>Full name: ".$txtarray['full_name']."<br/>Email: ".$txtarray['email']."</h6><br/><textarea class='form-control' id='selected-item' readonly>Message:    ".$txtarray['inquiry_txt']."</textarea>";
       } else {
         echo "<p class='lead'>Unable to display</p>";
       }

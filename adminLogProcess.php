@@ -34,13 +34,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $staff = $result->fetch_assoc();
 
         if ($staff) {
-            if (password_verify($password, $staff['pw'])) {
+            if (password_verify($password, $staff['pw']) AND $staff['status'] == 1) {
                 session_start();
                 $_SESSION["staff_ses"] = $staff["sid"];
                 header("Location: adminDashboard.php");
                 exit();
             } else {
-                $error = "Invalid password";
+                $error = "Invalid password or Account deactivated";
                 header("Location: adminLogin.php?error=".urlencode($error));
                 exit();
             }

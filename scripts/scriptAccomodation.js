@@ -8,7 +8,6 @@ slider.oninput =function () {
     
 }
 
-
 var incrementButton =document.getElementsByClassName("inc");
 var decrementButton =document.getElementsByClassName("dec");
 
@@ -56,7 +55,7 @@ const upButton =document.querySelector('.up-button');
 const slideLength=slideRight.querySelectorAll('div').length;
 
 
-let activeSlideIndex =0;
+let activeSlideIndex = 0;
 
 slideLeft.style.top =`-${(slideLength-1)*100}vh`;
 upButton.addEventListener('click',()=> changeSlide('up'));

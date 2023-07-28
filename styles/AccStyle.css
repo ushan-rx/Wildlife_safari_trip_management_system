@@ -1,0 +1,115 @@
+body{
+    background-image: url("../images/t1.jpg");
+    background-repeat: no-repeat;
+  }
+  
+  
+  .user {
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+  }
+  
+   h2{
+    font-size: 25px;
+    position: absolute;
+    left: 70%;
+    bottom: 80%;
+    align-items: center;
+    font-size: 35px;
+  }
+  
+  h3{
+  
+    font-size: 25px;
+    position: absolute;
+    left: 68%;
+    bottom: 70%;
+    align-items: center;
+    font-size: 35px;
+  }
+  
+  .job-location {
+    
+    font-size: 25px;
+    position: absolute;
+    left: 68%;
+    bottom: 40%;
+    align-items: center;
+    font-size: 35px;
+  }
+  
+  
+  
+  .job-description {
+    font-size: 25px;
+    position: absolute;
+    left: 68%;
+    bottom: 48%;
+    align-items: center;
+    font-size: 35px;
+  
+  }
+  .job-salary{
+    position: absolute;
+    left: 68%;
+    bottom: 60%;
+    align-items: center;
+    font-size: 35px;
+  }
+  
+  
+  .job-btn {
+    display: flex;
+    color: var(--clr-default-txt);
+  }
+  
+  
+  .j-edit {
+    background:  white;
+    color: black;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    margin-right: 80%;
+    margin-left: 80%;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    border-radius: 5px;
+
+  }
+   
+  
+  a.active,
+  a:hover {
+    
+    transition: 0.5s;
+  }
+  
+  
+  
+  /* Responsive styles for smaller screens */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .j-title {
+      font-size: 20px;
+    }
+  
+    .job-item {
+      padding: 10px;
+    }
+  
+    .job-title {
+      font-size: 18px;
+    }
+  
+  }
+  
+
+  
+  

@@ -34,6 +34,10 @@ if (empty($_SESSION['staff_ses'])) {
                 <a href="inquiryDash.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-comments me-2"></i>Inquiries
                 </a>
+
+                <?php 
+                if($staffDet['staff_type'] == "ADM" || $staffDet['staff_type'] == "MNG"){
+                ?>
                 <a href="adminCancelReservation.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-table-list me-2"></i>Reservations
                 </a>
@@ -42,6 +46,9 @@ if (empty($_SESSION['staff_ses'])) {
                 </a>
                 <a href="dashPackage.php" class="sidebar-txt list-group-item list-group-item-action bg-transparent fw-bold">
                     <i class="fa-solid fa-briefcase me-2"></i>Packages</a>
+                <?php
+                }   
+                ?>
 
                 <a href="adminLogout.php" class=" text-danger list-group-item list-group-item-action bg-transparent fw-bold"><i
                         class="fas fa-power-off me-2"></i>Logout</a>

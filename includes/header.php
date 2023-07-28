@@ -24,7 +24,7 @@
                 <img src="images/user-icon.png" alt="user icon" class="user-icon"  id="nav_user_icon">
                 <span class="user-list hidden" id="nav_user_list">
                     <ul>
-                        <li><a href="accSetting.php">Account</a></li>
+                        <li><a href="acc.php">Account</a></li>
                         <li><a href="logout.php">Log Out</a></li>
                     </ul>
                 </span>

@@ -5,8 +5,7 @@
     background: #fff;
     padding: 20px;
     border-radius: 5px;
-    border: #333;
-  
+    border: 1px solid #333;
   }
   .container header {
     font-size: 1.5rem;
@@ -16,8 +15,7 @@
   }
   
   .form .input-box {
-  
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .input-box label {
     color: #333;
@@ -28,7 +26,7 @@
     width: 100%;
     outline: none;
     color: #707070;
-    margin-top: 5px;
+    margin-top: 3px;
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
@@ -48,7 +46,8 @@
   }
   
   input[type=submit] {
-  
+
+    margin-inline: 0.5rem;
     cursor: pointer;
     padding: 0.5em 0.9em;
     border-radius: 0.5em;
@@ -70,3 +69,7 @@
       inset 0 0 0 1px #ffffff;
   }
   
+  header{
+    text-decoration: underline;
+    font-weight: 600;
+  }

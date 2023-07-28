@@ -14,7 +14,7 @@
     rel="stylesheet">
   
     <link rel='stylesheet' type='text/css' media='screen' href='styles\styleGen.css'>
-  <link rel='stylesheet' type='text/css' media='screen' href='styles\styleAbout.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles\AboutStyle.css'>
 
 </head>
 <body>
@@ -25,7 +25,7 @@
   <div class="inner-section">
     <div class="skills">
       <button type="button"><a href="AboutUs.php">About us</a></button>
-      <button type="button"><a href="UserGuide.php">User Guide</a></button>
+      <button type="button"><a href="userGuide.php">User Guide</a></button>
       <button type="button"><a href="terms.php">Terms & Conditions</a></button>
     </div>
   </div>
@@ -64,5 +64,7 @@
 
   </section>
   <?php include 'includes/footer.php' ?>
+  <script src='scripts/scriptGen.js'></script>
+  
 </body>
 </html>

@@ -23,44 +23,75 @@
                 </div>
             </nav>
 
-            <div class="row g-5 my-5">
+            <div class="row g-5">
                 <div class="col">
                
                 <section class="container">
-                <?php require 'process_Staff.php'; ?> 
 
-                <header>Staff Details <header> 
-                <form action = "process_Staff.php" method="post">
+                <h2 class="fs-3 text-center m-2">Staff Details </h2> 
+                <form action = "process_Staff.php" method="post" class="text-center">
                     
                         <div class="form">
                             <div class="input-box">
                                 <label>First Name </lable>
-                                <input type="text"  name="fname"> 
+                                <input type="text"  name="fname" value="<?php
+                                    echo (isset($_GET['fname']))? ($_GET['fname']) : '';
+                                ?>"> 
                                 
                             </div>
 
                             <div class="input-box">
-                                <label>Last  Name </lable>
-                                <input type="text"  name="lname" >
+                                <label>Last Name </lable>
+                                <input type="text"  name="lname" value="<?php
+                                    echo (isset($_GET['lname']))? ($_GET['lname']) : '';
+                                ?>">
                             
                             </div>
 
-                            <div class="input-box">
-                                <label>Email</lable>
-                                <input type="text" name="email">
+                            <div class="input-box ">
+                                <label>Staff ID </lable>
+                                <input type="text"  name="sid" value=<?php
+                                    echo '"';
+                                    if(isset($_GET['sid'])){
+                                    echo ($_GET['sid']);
+                                    echo '" readonly';  //disable sid field
+                                    }else{
+                                        echo '"';  
+                                    }
+                                ?>> 
                                 
                             </div>
 
+                            <div class ="select-box">
+                                <label>Staff type</lable>
+                                    <select name="staff_type">
+                                        <option value="ADM" <?php echo (isset($_GET['type']) AND $_GET['type'] == "ADM")? "selected": "";?> >Admin</option>
+                                        <option value="MNG" <?php echo (isset($_GET['type']) AND $_GET['type'] == "MNG")? "selected": "";?>>Manager</option>
+                                        <option value="CSA" <?php echo (isset($_GET['type']) AND $_GET['type'] == "CSA")? "selected": "";?>>Customer Care</option>
+                                    </select>
+                            </div>
+
                             <div class="input-box">
-                                <label>Staff ID</lable>
-                                <input type="text"  name="sid">
-                                
+                                <label>Email </lable>
+                                <input type="email"  name="email" value="<?php
+                                    echo (isset($_GET['mail']))? ($_GET['mail']) : '';
+                                ?>">
+                            
                             </div>
 
                             
-                               <input type="submit" name="insert"    value="Insert"> 
-                               <input type="submit" name="delete"    value="Delete">
-                               <input type="submit" name="update"    value="Update"> 
+                            <div class="input-box">
+                                <label>Password </lable>
+                                <input type="password"  name="pw">
+                                
+                            </div>
+                            
+                            
+                               <input class="mx-2 mt-4" type="submit" name="insert"    value="Insert"> 
+                               <input class="mx-2 mt-4" type="submit" name="delete"    value="Delete">
+                               <input class="mx-2 mt-4" type="submit" name="update"    value="Update"> 
+                               <input class="mx-2 mt-4" type="submit" name="show"    value="show">
+                               <input class="mx-2 mt-4" type="submit" name="reset"    value="reset">
                         </div>      
                    </form>
                   </section>

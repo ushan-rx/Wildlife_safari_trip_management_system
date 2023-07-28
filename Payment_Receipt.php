@@ -25,6 +25,21 @@
 
   <?PHP include 'includes/header.php'; ?>
 
+  <?php
+if (!isset($_SESSION)) {
+  session_start();
+}
+
+if(isset($_SESSION['reservation_id'])){
+
+    $rid = $_SESSION['reservation_id'];
+
+  }else{
+    header('Location: signInUp.php');
+    exit();
+  }
+
+?>
   <section id="card">
     <div class="card">
       <div class="card-details">
@@ -49,7 +64,7 @@
 
             <div class="cvv">
               <label for="cvv">CVV:</label>
-              <input type="text" id="cvv" placeholder="CVV" required>
+              <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
             </div>
 
           </div>
@@ -151,7 +166,7 @@
       </div>
 
       <div class="go_homeBtn">
-        <button onclick="">Go Home page</button>
+        <button ><a href="index.php">Go Home page</a></button>
       </div>
       
     </div>

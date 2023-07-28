@@ -23,7 +23,89 @@
 
   <?PHP include 'includes/header.php'; ?> 
 
-  <?php include 'process_comformPaymentDetails.php'; ?>
+  
+
+
+  <?php
+  
+  require 'classes/connection.php';
+
+  $dbConnect = Database::getConnection();
+
+
+    if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
+
+  if(!isset($_SESSION['user_ses'])){
+    header('Location: signInUp.php');
+    exit();
+  }
+
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    
+
+    if (isset($_POST['submit_bestDels_button']) || isset($_POST['submit_pkgDels_button'])) {
+        
+        $package_ID = $_POST['pkg_id'];
+        $reserved_date = $_POST['date'];
+        $no_Of_People = intval($_POST['no_Of_People']);
+        $accommodation = $_POST['accommodation'];
+        $no_Of_Rooms = intval($_POST['no_Of_Rooms']);
+        $total_amount = intval($_POST['total_amount']);
+
+
+        $reserved_date = date('Y-m-d', strtotime($reserved_date));
+
+        // echo 'pacj ' . $package_name;
+        // echo 'pakhdcj ' . $total_room_count;
+       
+        // header('Location: PaymentComform.php?name=' .urlencode($package_name));
+       
+        
+    }else{
+        header('Location: PackageCard.php');
+        exit;
+    }
+
+        $status = 1;
+        $reservation_date = date('Y-m-d H:i:s');
+
+        //get the package name and no of days from the package table
+        $pkg_sql = "SELECT p_name, no_of_days, price_per_person FROM package WHERE pkg_id = '$package_ID'";
+        $resultPkg = Database::search($pkg_sql);
+        $PkgDetails = $resultPkg->fetch_assoc();
+
+        $package_name = $PkgDetails['p_name'];
+        $no_of_night = $PkgDetails['no_of_days'];
+        $package_price_per_person = $PkgDetails['price_per_person'];
+
+
+        //get the accommodation price and hotel name from the package table
+        $acc_sql = "SELECT price, hotel_name, total_room_count FROM accommodation WHERE aid  = '$accommodation'";
+        $resultPkg = Database::search($acc_sql);
+        $accResalt = $resultPkg->fetch_assoc();
+        $acc_price = $accResalt['price'];
+        $acc_name = $accResalt['hotel_name'];
+        $total_room_count = $accResalt['total_room_count']; 
+
+        if(isset($_POST['submit_bestDels_button'])){
+          $total_Payment = $total_amount;
+        }elseif(isset($_POST['submit_pkgDels_button'])){
+          //calculate the Total Amount
+          $total_Payment = ($acc_price * $no_Of_Rooms) + ($package_price_per_person * $no_Of_People);
+        }
+        
+} else {
+  header('Location: signInUp.php');
+    exit();
+}
+  
+  ?>
+
 
    <section class="popup-bill" id="popup-bill">
     <div class="bill-box">
@@ -32,7 +114,7 @@
         <table class="details">           
           <tr>
             <td>Pacage</td>
-            <td><?php echo $package_name?></td>
+            <td><?php echo $package_name ?></td>
           </tr>
           <tr>
             <td>Date</td>
@@ -68,8 +150,20 @@
           <button id="cancle">Cancle</button>
         </div>
 
-        <div class="comform-button">    
-          <a href="process_comformPaymentDetails.php?com=comform"><button id="comform">Comform</button></a>
+        <div class="comform-button">
+          <form action="process_comformPaymentDetails.php?com=comform" method="POST">
+
+            <input style="display:none;" type="text" value="<?php echo $package_ID ?>" name="pkg_id">
+            <input style="display:none;"  type="text" value="<?php echo $accommodation ?>" name="accommodation">
+            <input style="display:none;"  type="text" value="<?php echo $no_Of_People ?>" name="no_Of_People">
+            <input style="display:none;"  type="text" value="<?php echo $reserved_date ?>" name="date">
+            <input style="display:none;"  type="text" value="<?php echo $no_Of_Rooms ?>" name="no_Of_Rooms">
+            <input style="display:none;"  type="text" value="<?php echo $total_Payment ?>" name="total_Payment">
+
+            <button name="comform_details" id="comform">Comform</button>
+
+          </form>    
+          
         </div>
       </div>
 

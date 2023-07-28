@@ -39,7 +39,9 @@
         <div class="col-sm-8 ">
           <div class="form-group secondary-bg p-2">
             <label for="selected-item">Inquiry Id: <span id="selected-item2"></span></label>
-            <textarea class="form-control" id="selected-item" readonly></textarea>
+            <span id="selected-content">
+              <textarea class="form-control" id="selected-item" readonly></textarea>
+            </span>
             <button class="btn btn-primary mt-4 bg-danger" id="submit-button">Delete</button>
           </div>
         </div>
@@ -65,7 +67,7 @@
         url: "inquiryProcess.php",
         method: "POST",
         data: { action: "get_list_items" },
-        success: function (data) {
+        success: function (data) {  
           $('#list-group').html(data);
         }
       });
@@ -79,7 +81,7 @@
           method: "POST",
           data: { action: "update_text_field", selectedItem2: selectedItem },
           success: function (data) {
-            $('#selected-item').val(data);
+            $('#selected-content').html(data);
           }
         });
       });

@@ -7,7 +7,7 @@ class Database{
     public static function setUpConnection(){
         if(!isset(Database::$connection)){
             Database::$connection = 
-            new mysqli("localhost","root","","safari_management_system","3306");
+            new mysqli("localhost","root","","safari_management_system");
         }
     }
 

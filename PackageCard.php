@@ -26,34 +26,82 @@
 </head>
 
 <body>
-<?PHP include 'includes/header.php'; ?>
+  
+<?PHP include 'includes/header.php'; ?>  
 
   <!-- your code here -->
   <!---->
+    
+  <?php
+
+    $bestDeals1 = 'PK000001';
+    $bestDeals2 = 'PK000002';
+    $bestDeals3 = 'PK000003';
+
+    $pkgB_sql = "SELECT p_name, no_of_days, price_per_person FROM package WHERE pkg_id IN ('$bestDeals1', '$bestDeals2', '$bestDeals3')";
+    $resultPkg = mysqli_query($conn, $pkgB_sql);
+
+    $i = 0;
+    $bestDealsPkg = array();
+
+     while ($bestPkgDetail = $resultPkg->fetch_assoc())
+    
+    //while($bestPkgDetail = mysqli_fetch_all( $resultPkg, MYSQLI_ASSOC))
+    { 
+      $i++;
+        $bestDealsPkg[$i]['name'] = $bestPkgDetail['p_name'];
+        $bestDealsPkg[$i]['no_of_days'] = $bestPkgDetail['no_of_days'];
+        $bestDealsPkg[$i]['price_per_person'] = $bestPkgDetail['price_per_person'] * 75/100;
+        
+    }   
+ 
+
+
+    $accommodation1 = 'AI000001';
+    $accommodation2 = 'AI000002';
+    $accommodation3 = 'AI000003';
+
+    $accoB_sql = "SELECT hotel_name FROM accommodation WHERE aid  IN ('$accommodation1', '$accommodation2', '$accommodation3')";
+    $resultAcco = mysqli_query($conn, $accoB_sql);
+
+    $j = 0;
+    $bestPkgHotel = array();
+
+    while ($bestPkgAcco = $resultAcco->fetch_assoc()) { 
+      $j++;
+      $bestPkgHotel[$j] = $bestPkgAcco['hotel_name'];  
+    }  
+
+   
+
+    ?> 
+
+
      <div class="cards">
         <div class="side-card">
             <ul class="unorderli">
                 <li class="pack">Best Deal</li>
+                <?php $total_amount1 = $bestDealsPkg[1]['price_per_person']*2; ?>
                 <li id="basic" class="side-card-price">&dollar; <!---->
-                    49.99</li>
-                    <li class="bottom-bar">Yala National Park</li>
-                    <li class="bottom-bar"> Jetwing Yala</li>
+                  <?php  echo $total_amount1; ?> </li>
+                    <li class="bottom-bar"><?php echo $bestDealsPkg[1]['name'] ?></li>
+                    <li class="bottom-bar"> <?php echo $bestPkgHotel[1]?></li>
                     <li class="bottom-bar"> 2 person</li>
-                    <li class="bottom-bar"> 3 night</li>
+                    <li class="bottom-bar"><?php echo $bestDealsPkg[1]['no_of_days'] ?> days</li>
                     <li class="bottom-bar"> 09.09.2022</li>
 
                     
                     <li>
-                    <form method="Get" method="send_best_deals.php">
+                  <form action="PaymentComform.php" method="POST" >
 
-                  <input style="display:none;" type="text" value="$49.99" name="price">
-                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="Jetwing Yala" name="accomadation">
-                  <input style="display:none;"  type="text" value="2 person" name="persons">
-                  <input style="display:none;"  type="text" value="3 night" name="nights">
+                  <input style="display:none;" type="text" value="<?php echo $bestDeals1 ?>" name="pkg_id">
+                  <input style="display:none;"  type="text" value="<?php echo $accommodation1 ?>" name="accommodation">
+                  <input style="display:none;"  type="text" value="2 person" name="no_Of_People">
                   <input style="display:none;"  type="text" value="09.09.2022" name="date">
+                  <input style="display:none;"  type="text" value="1" name="no_Of_Rooms">
+                  <input style="display:none;"  type="text" value="<?php echo $total_amount1 ?>" name="total_amount">
 
-                  <button type="submit" class="side-purchase-btn">Book Now</button>
+                  <button type="submit" name="submit_bestDels_button" class="side-purchase-btn">Book Now</button>
                 </form>
                     </li>
               </ul>
@@ -61,26 +109,28 @@
          <div class="middle-card">   
          <ul class="unorderli">
             <li class="middle-pack">Best Deal</li>
+            <?php $total_amount2 = $bestDealsPkg[2]['price_per_person']*3; ?>
             <li id="basic" class="middle-card-price">&dollar;
-                149.99</li>
+            <?php  echo $total_amount2; ?> </li>
+            
 
-                <li class="bottom-bar">Yala National Park</li>
-                    <li class="bottom-bar"> Wild Trails Yala by Suri</li>
-                    <li class="bottom-bar"> 2 person</li>
-                    <li class="bottom-bar"> 3 night</li>
+                <li class="bottom-bar"><?php echo $bestDealsPkg[2]['name'] ?></li>
+                    <li class="bottom-bar"> <?php echo $bestPkgHotel[2] ?></li>
+                    <li class="bottom-bar"> 3 person</li>
+                    <li class="bottom-bar"> <?php echo $bestDealsPkg[2]['no_of_days'] ?> days</li>
                     <li class="bottom-bar"> 09.09.2022</li>
                 
                 <li>
-                <form method="POST">
+                <form action="PaymentComform.php" method="POST" >
                 
-                <input style="display:none;" type="text" value="$49.99" name="price">
-                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="Wild Trails Yala by Suri" name="accomadation">
-                  <input style="display:none;"  type="text" value="2 person" name="persons">
-                  <input style="display:none;"  type="text" value="3 night" name="nights">
-                  <input style="display:none;"  type="text" value="09.09.2022" name="date">
+                <input style="display:none;" type="text" value="<?php echo $bestDeals2 ?>" name="pkg_id">
+                <input style="display:none;"  type="text" value="<?php echo $accommodation2 ?>" name="accomodation">
+                <input style="display:none;"  type="text" value="3 person" name="no_Of_People">
+                <input style="display:none;"  type="text" value="09.09.2022" name="date">
+                <input style="display:none;"  type="text" value="1" name="no_Of_Rooms">
+                <input style="display:none;"  type="text" value="<?php echo $total_amount2 ?>" name="total_amount">
                 
-                <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
+                <button type="submit" name="submit_bestDels_button" class="middle-purchase-btn">Book Now</button>
                 </form>
 
                 </li>   
@@ -89,34 +139,39 @@
     <div class="side-card">
         <ul class="unorderli">
            <li class="pack">Best Deal</li>
+           <?php $total_amount3 = $bestDealsPkg[3]['price_per_person']*2; ?>
        <li id="basic" class="side-card-price">&dollar;
-            99.99</li>
+       <?php  echo $total_amount3; ?> </li>
+       
           
-            <li class="bottom-bar">Yala National Park</li>
-                    <li class="bottom-bar"> Leopard Trails Yala</li>
+            <li class="bottom-bar"><?php echo $bestDealsPkg[3]['name'] ?></li>
+                    <li class="bottom-bar"> <?php echo $bestPkgHotel[3] ?></li>
                     <li class="bottom-bar"> 2 person</li>
-                    <li class="bottom-bar"> 3 night</li>
+                    <li class="bottom-bar"> <?php echo $bestDealsPkg[3]['no_of_days']?> days</li>
                     <li class="bottom-bar"> 09.09.2022</li>
             
             <li>  
-                <form method="POST">
-                  
-                <input style="display:none;" type="text" value="$49.99" name="price">
-                  <input style="display:none;" type="text" value="Yala National Park" name="safari">
-                  <input style="display:none;"  type="text" value="Leopard Trails Yala" name="accomadation">
-                  <input style="display:none;"  type="text" value="2 person" name="persons">
-                  <input style="display:none;"  type="text" value="3 night" name="nights">
-                  <input style="display:none;"  type="text" value="09.09.2022" name="date">
-                
-                <button style="display:block" type="submit" class="side-purchase-btn">Book Now</button>
-                </form>
+              <form action="PaymentComform.php" method="POST" >
+
+                <input style="display:none;" type="text" value="<?php echo $bestDeals3 ?>" name="pkg_id">
+                <input style="display:none;"  type="text" value="<?php echo $accommodation3 ?>" name="accommodation">
+                <input style="display:none;"  type="text" value="2 person" name="no_Of_People">
+                <input style="display:none;"  type="text" value="09.09.2022" name="date">
+                <input style="display:none;"  type="text" value="1" name="no_Of_Rooms">
+                <input style="display:none;"  type="text" value="<?php echo $total_amount3 ?>" name="total_amount">
+
+                <button type="submit" name="submit_bestDels_button" class="side-purchase-btn">Book Now</button>
+              </form>
             </li>   
         </ul>
     </div>
 </div>
 
+
+
+
      <?php
-        $sql = "SELECT * FROM package";
+        $sql = "SELECT * FROM package WHERE Status = 1";
         $result = mysqli_query($conn, $sql);
         $packages = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -147,7 +202,7 @@
 
       
             <li><?php echo $p1_description ?></li>
-            <li><?php echo $p1_no_of_days ?>night</li>
+            <li><?php echo $p1_no_of_days." "?>night</li>
             
 
             </ul>
@@ -183,7 +238,7 @@
 
             
             <li><?php echo $p2_description ?></li>
-            <li><?php echo $p2_no_of_days ?>night</li>
+            <li><?php echo $p2_no_of_days." "?>night</li>
             
 
 
@@ -220,7 +275,7 @@
             
             
             <li><?php echo $p3_description ?></li>
-            <li><?php echo $p3_no_of_days ?>night</li>
+            <li><?php echo $p3_no_of_days." "?>night</li>
             
 
             </ul>
@@ -258,7 +313,7 @@
           
            
             <li><?php echo $p4_description ?></li>
-            <li><?php echo $p4_no_of_days ?>night</li>
+            <li><?php echo $p4_no_of_days." "?>night</li>
             
 
             </ul>
@@ -289,14 +344,14 @@
 
 
 
-        <div class="pricing-card">
+            <div class="pricing-card">
             <h3 class="pricing-card-header"><?php echo $p5_name ?></h3>
             <div class="price"><sup>$</sup><?php echo $p5_price_per_person ?></div>
             <ul class="unorder-safari-packages">
             
           
             <li><?php echo $p5_description  ?></li>
-            <li><?php echo $p5_no_of_days ?> night</li>
+            <li><?php echo $p5_no_of_days." "?> night</li>
             
 
             </ul>

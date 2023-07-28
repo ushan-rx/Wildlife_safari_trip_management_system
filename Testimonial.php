@@ -3,6 +3,9 @@
 //used to connect with database
 require 'config.php';
 
+require_once 'classes/connection.php';
+require_once 'classes/generateId.php';
+
 //used to check if the submit button is clicked under post conditions
 if (isset($_POST['submit'])) {
 
@@ -14,15 +17,27 @@ if (isset($_POST['submit'])) {
   $country = $_POST['country'];
   $message = $_POST['message'];
 
+   //generate the Feedback ID
+   $getFD_sql = "SELECT MAX(fback_id) AS 'lastone' FROM feedback";
+   $resultFD = Database::search($getFD_sql);
+   $lastFDid = $resultFD->fetch_assoc();
+   $feedback_id = GenerateId::generate($lastFDid['lastone'],"FD");
+
+  if(!isset($_SESSION)){
+    SESSION_START();
+  }
+
+  $uid = $_SESSION['user_ses'];
+
   //assign sql query
-  $sql = "INSERT INTO feedback (Name, Email,reservation_id, Country, Massage) VALUES ('$name', '$email', '$booking_id', '$country', '$message')";
+  $sql = "INSERT INTO feedback (fback_id, Name, Email, reservation_id, uid, Country, Massage) VALUES ('$feedback_id' , '$name', '$email', '$booking_id', '$uid', '$country', '$message')";
 
   //run sql query
   $result = mysqli_query($conn, $sql);
 
 
   //if sql query is successfull or not print message as a alert box in js
-  if ($result) {
+  if (($result)) {
 
     echo "<script>alert('Thank you for your feedback!');</script>";
 
@@ -63,11 +78,15 @@ if (isset($_POST['submit'])) {
 
   <!--my part-->
   <div class="test">Tell us,How was your<br> visit? </div>
-  <!--<div class="test-background">
-    <img src="images/bck.jpg" alt="Tell us background image" />
-  </div>-->
+
   <div class="comment-button">
-    <button id="write-review">Share Your Experience<img src="images/comment.png" class="comment-icon"></button>
+    <?php
+    
+    if(isset($_SESSION['user_ses'])){
+
+    echo '<button id="write-review">Share Your Experiences</button>';
+  }
+  ?>
   </div>
 
   <!--POPup Form-->
@@ -77,16 +96,16 @@ if (isset($_POST['submit'])) {
       <form action="" method="POST">
         <div id="close-btn" class="close-btn">&times </div>
         <h3>Give Your Feedback</h3>
-        <!--<label for="">Name</label>-->
+
         <input type="text" placeholder="name" name="name" required>
-        <!--<label for="">Email</label>-->
-        <input type="text" placeholder="Email" name="email" required>
-        <!--<label for="">Booking ID</label>-->
+
+        <input type="email" placeholder="Email" name="email" required>
+
         <input type="text" name="booking_id" placeholder="Booking ID(optional)">
         <input type="text" name="country" placeholder="Country" required>
         <input placeholder="Your Message" name="message" required></input>
+
         <div id="submit-btn" class="submit-button">
-          <!-- add a submit button  -->
           <input type="submit" name="submit" value="Submit" class="submit-btn">
         </div>
 
@@ -99,25 +118,36 @@ if (isset($_POST['submit'])) {
 
 
   <div class="container" id="container">
-    <div class="testimonials"> <!--Except Shehani akarsha feedback-->
+    <div class="testimonials">
       <div class="testimonials--big">
-        <!--<div class="bg">
-          <img src="./images/bg-pattern-quotation.svg" alt="background"> 
-        </div>-->
+
         <div class="info">
-          <!--<div class="img">
-            <img src="./images/image-daniel.jpg" alt="daniel name" />
-          </div>-->
+
           <div class="name">
-            <h3>Jim Brown</h3>
-            <p>Booking ID</p>
+            <?php
+
+
+
+            //get Message from feedback in decending order
+            $sql = "SELECT * FROM feedback ORDER BY fback_id DESC";
+
+
+            $result = mysqli_query($conn, $sql);
+
+            //fetch all rows into an assocuative array
+            
+            $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            $rowIndex = 0;
+            $specificRow = $rows[$rowIndex];
+            echo "<h3>{$specificRow['Name']}</h3>";
+            echo "<p>{$specificRow['Country']}</p>";
+            ?>
+
           </div>
         </div>
         <div class="view">
-          <!--<h3 class="bold">
-            I received a job offer mid-course, and the subjects I learned were current, if not more so,
-            in the company I joined. I honestly feel I got every penny’s worth.
-          </h3>-->
+
           <?php
 
 
@@ -148,31 +178,37 @@ if (isset($_POST['submit'])) {
 
 
           ?>
-          <!-- 
 
-          <p class="normal">
-            “Since the first moment I contacted Master Safari, Sajidh took care of everything and in a few hours we recevied a complete and detailed itinerary so since the first contact I was impressed in the quality of the service.
-            Everything was so easy with them and we kept communication until the arrivel day, when our driver-guide was waiting for us.
-            We enjoyed very much everything, the activities proposed and hotels, the driver at the end was like a friend of us...Whoever is thinking of going to Sri Lanka there is no doubt that mastersafari can help you with anything and making your travels easy...
-            Thank you very much for everything Sajidh! ”
-          </p> -->
 
         </div>
       </div>
       <div class="testimonials--small">
         <div class="info">
-          <!--<div class="img">
-            <img src="./images/image-jonathan.jpg" alt="daniel name" />
-          </div>-->
+
           <div class="name">
-            <h3>Pathum Adithya</h3>
-            <p>Verified Graduate</p>
+            <?php
+
+
+
+            //get Message from feedback in decending order
+            $sql = "SELECT * FROM feedback ORDER BY fback_id DESC";
+
+
+            $result = mysqli_query($conn, $sql);
+
+            //fetch all rows into an assocuative array
+            
+            $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            $rowIndex = 1;
+            $specificRow = $rows[$rowIndex];
+            echo "<h3>{$specificRow['Name']}</h3>";
+            echo "<p>{$specificRow['Country']}</p>";
+            ?>
           </div>
         </div>
         <div class="view">
-          <!--<h3 class="bold">
-            The team was very supportive and kept me motivated
-          </h3> -->
+
 
           <?php
 
@@ -201,14 +237,27 @@ if (isset($_POST['submit'])) {
       </div>
       <div class="testimonials--small white">
         <div class="info">
-          <!--<div class="img">
-            <img src="./images/image-jeanette.jpg" alt="jeanette name" />
-          </div>-->
+
           <div class="name">
-            <h3>
-              Jenette Harmon
-            </h3>
-            <p>Verified Graduate</p>
+            <?php
+
+
+
+            //get Message from feedback in decending order
+            $sql = "SELECT * FROM feedback ORDER BY fback_id DESC";
+
+
+            $result = mysqli_query($conn, $sql);
+
+            //fetch all rows into an assocuative array
+            
+            $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            $rowIndex = 2;
+            $specificRow = $rows[$rowIndex];
+            echo "<h3>{$specificRow['Name']}</h3>";
+            echo "<p>{$specificRow['Country']}</p>";
+            ?>
           </div>
         </div>
         <div class="view">
@@ -242,8 +291,25 @@ if (isset($_POST['submit'])) {
         <div class="info">
 
           <div class="name">
-            <h3>Nimeshi dissanayake</h3>
-            <p>Verified Graduate</p>
+            <?php
+
+
+
+            //get Message from feedback in decending order
+            $sql = "SELECT * FROM feedback ORDER BY fback_id DESC";
+
+
+            $result = mysqli_query($conn, $sql);
+
+            //fetch all rows into an assocuative array
+            
+            $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            $rowIndex = 4;
+            $specificRow = $rows[$rowIndex];
+            echo "<h3>{$specificRow['Name']}</h3>";
+            echo "<p>{$specificRow['Country']}</p>";
+            ?>
           </div>
         </div>
         <div class="view">
@@ -279,8 +345,25 @@ if (isset($_POST['submit'])) {
       <div class="info">
 
         <div class="name">
-          <h3>Shehani Akarsha</h3>
-          <p>Verified Graduate</p>
+          <?php
+
+
+
+          //get Message from feedback in decending order
+          $sql = "SELECT * FROM feedback ORDER BY fback_id DESC";
+
+
+          $result = mysqli_query($conn, $sql);
+
+          //fetch all rows into an assocuative array
+          
+          $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+          $rowIndex = 5;
+          $specificRow = $rows[$rowIndex];
+          echo "<h3>{$specificRow['Name']}</h3>";
+          echo "<p>{$specificRow['Country']}</p>";
+          ?>
         </div>
       </div>
       <div class="view">
@@ -297,7 +380,7 @@ if (isset($_POST['submit'])) {
         
         $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-        $rowIndex = 4;
+        $rowIndex = 5;
 
         if ($rowIndex < count($rows)) {
           $specificRow = $rows[$rowIndex];

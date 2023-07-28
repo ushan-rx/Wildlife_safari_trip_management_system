@@ -13,16 +13,14 @@
     rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='styles/styleGen.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel='stylesheet' type='text/css' media='screen' href='styles/styleContact.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/ContactStyle.css'>
 
 </head>
 
 
 <body>
-
     <?php include 'classes/connection.php' ?>
     <?php require 'includes/header.php' ?>
-
 
   <!-- your code here -->
   <section class="contact">
@@ -69,13 +67,10 @@
 
         </div>
 
+
         <div class="contactForm">
             <form action="form.php" method="post">
                 <h2>Let our experts help you to plane your perfect trip!</h2>
-                <div class="inputBox">
-                    <input type="text" name="inquiry_id" id="inquiry_id" required="required"/>
-                    <span>Inquiry_id</span>
-                </div>
 
                 <div class="inputBox">
                     <input type="text" name="full_name" id="firstName" required="required"/>
@@ -88,7 +83,7 @@
                 </div>
 
                 <div class="inputBox">
-                    <input type="text" name="county" id="form_country" required="required"/>
+                    <input type="text" name="country" id="form_country" required="required"/>
                     <span>Country</span>
                 </div>
 
@@ -118,9 +113,9 @@
     </div>
 </section>
 
+
   <!-- to here -->
  <?php include 'includes/footer.php'?>
- <script src='scripts/scriptTestimonial.js'></script> 
  <script src='scripts/scriptGen.js'></script>
 </body>
 

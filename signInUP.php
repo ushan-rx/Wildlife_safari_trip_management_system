@@ -17,7 +17,7 @@
     <div class="col-wrapper">
         <!-- sign up -->
         <div class="form-sec" id="reg_form">
-            <a href="#" class="site-icon">
+            <a href="index.php" class="site-icon">
                 <img src="images/deerlogo.png" alt="website logo">
                 <img src="images/sitename.png" alt="website name">
             </a>
@@ -90,7 +90,7 @@
         </div>
 
         <div class="form-sec sign-form" >
-            <a href="#" class="icon-inverted">
+            <a href="index.php" class="icon-inverted">
                 <img src="images/sitename.png" alt="website name">
                 <img src="images/deerlogo.png" alt="website logo">
             </a>

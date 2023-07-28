@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $days = $_POST['days'];
         $start_date = $_POST['start_date'];
 
-        if (!empty($name) && !empty($pk_id) && !empty($price) && !empty($description) && !empty($days)) {
+        if (!empty($pk_id)) {
             $dlt_sql = "UPDATE package SET status = 0 WHERE pkg_id  = ? ";
             $dlt_stmt = $dbConnect->prepare($dlt_sql);
             $dlt_stmt->bind_param('s', $pk_id);
