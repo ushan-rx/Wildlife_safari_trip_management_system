@@ -2,6 +2,7 @@
  web application project for IWT module in SLIIT Y1S2
 
 > This project includes the website and Admin Panel.
+> Design documentation - https://github.com/ushan-rx/Wildlife_safari_trip_management_system/blob/main/design_documentation.pdf
 
  Contributors:
 
