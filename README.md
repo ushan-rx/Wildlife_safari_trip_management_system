@@ -3,6 +3,8 @@
 
 > This project includes the website and Admin Panel.
 
+Design documentation - https://github.com/ushan-rx/Wildlife_safari_trip_management_system/blob/main/design_documentation.pdf
+
  Contributors:
 
  * https://github.com/Charith-Aloka
